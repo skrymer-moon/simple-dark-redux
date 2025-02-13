@@ -173,7 +173,7 @@ theme3 "Copper" <<<EOT
 
         --background: #000;
         --main: #201c1a;
-        --columns: #080e10;
+        --columns: #100a08;
         --bar: #4a2216;
 
         --widget: #1d120e;
@@ -200,14 +200,14 @@ theme3 "Copper" <<<EOT
         --text: #ebdcc9;
         --text-med: #ab9c91;
         --text-dark: #3a342e;
-        --text-disabled: var(--text-med);
+        --text-disabled: #575452;
         --stroke: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 0px var(--shadow), -2px 1px 0px var(--shadow), -2px 2px 0px var(--shadow), -1px -2px 0px var(--shadow), -1px -1px 0px var(--shadow), -1px 0px 0px var(--shadow), -1px 1px 0px var(--shadow), -1px 2px 0px var(--shadow), 0px -2px 0px var(--shadow), 0px -1px 0px var(--shadow), 0px 0px 0px var(--shadow), 0px 1px 0px var(--shadow), 0px 2px 0px var(--shadow), 1px -2px 0px var(--shadow), 1px -1px 0px var(--shadow), 1px 0px 0px var(--shadow), 1px 1px 0px var(--shadow), 1px 2px 0px var(--shadow), 2px -2px 0px var(--shadow), 2px -1px 0px var(--shadow), 2px 0px 0px var(--shadow), 2px 1px 0px var(--shadow), 2px 2px 0px var(--shadow);
         --shadow: #060f12;
         
         --strong: #ca9a71;
 	    --em: #edddac;
-        --link: #7ad3da;
-        --link-hover: #fae2c3;
+        --link: #efcc8a;
+        --link-hover: #ff817a;
 
         --accent-one: #998975;
         --accent-two: #c6c5a8;
@@ -217,8 +217,8 @@ theme3 "Copper" <<<EOT
         
         --button-text: #fefdf2;
         --button-text-dark: #080e10;
-        --button-one: #f0e1d6;
-	    --button-two: #a2b6b6;
+        --button-one: #b39077;
+	    --button-two: #644b39;
         --beige-button-one: #c5795c;
         --beige-button-two: #3d574f;
         --red-button-one: #ddbb85;
@@ -857,18 +857,16 @@ adblock2 "Disable" <<<EOT  EOT;
         
 
 ==/UserStyle== */
-
-
 @-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com.*") {
     /* Global Styles */
-    
     :root {
         /*[[theme]]*/
         --font-family: Verdana, Geneva, sans-serif;
         --font-size: 12px;
     }
     /*main*/
-    ::selection, *::selection {
+    ::selection,
+    *::selection {
         filter: none !important;
         background: var(--selection-bg);
         color: var(--selection-text);
@@ -887,7 +885,8 @@ adblock2 "Disable" <<<EOT  EOT;
         background: var(--widget-light);
         border: 2px solid var(--widget-med)
     }
-    body, html {
+    body,
+    html {
         scrollbar-color: var(--widget-light) var(--section)
     }
     .main .content {
@@ -897,41 +896,131 @@ adblock2 "Disable" <<<EOT  EOT;
         font-size: 11px;
     }
     /*set misc. text color*/
-    td, th, .common-hub-item-description, #registration h1, #noauth-container h2, #error-404 div, .common-bubble-byline, .cc-color-override-603568657.cc-window {
+    td,
+    th,
+    .common-hub-item-description,
+    #registration h1,
+    #noauth-container h2,
+    #error-404 div,
+    .common-bubble-byline,
+    .cc-color-override-603568657.cc-window {
         color: var(--text);
     }
-    strong, b, .common-red-text, .ui-widget-content .common-red-text, .baldwin-redtext, .swipp-redtext, .trade-cost, h2, h3, .dgnres-index h2, .dgnres-select .dragon-name, #blurb #explanation span, #itemprev #prevcaption span, #baldwin-preview-container #baldwin-preview-icon-cooldown, .hoard-sale-buyback-item-name, .dgnres-index .cooldown .label, .wws-description h2 {
+    strong,
+    b,
+    .common-red-text,
+    .ui-widget-content .common-red-text,
+    .baldwin-redtext,
+    .swipp-redtext,
+    .trade-cost,
+    h2,
+    h3,
+    .dgnres-index h2,
+    .dgnres-select .dragon-name,
+    #blurb #explanation span,
+    #itemprev #prevcaption span,
+    #baldwin-preview-container #baldwin-preview-icon-cooldown,
+    .hoard-sale-buyback-item-name,
+    .dgnres-index .cooldown .label,
+    .wws-description h2 {
         color: var(--strong);
     }
-    span[style*="color:"][style*="#6F1111"], .pinkerton-text-footer span[style*="color"] {
+    span[style*="color:"][style*="#6F1111"],
+    .pinkerton-text-footer span[style*="color"] {
         color: var(--strong) !important;
     }
-    em, i, span.whos-online-subtitle em, h4, h5, h6, .settings-hub-category-header, .dragon-profile-customize-category-header {
+    em,
+    i,
+    span.whos-online-subtitle em,
+    h4,
+    h5,
+    h6,
+    .settings-hub-category-header,
+    .dragon-profile-customize-category-header {
         color: var(--em);
     }
     .wws-toggle-label {
         color: var(--text-disabled);
     }
-    a, a.link, .rotating-item a, #menucontainer a, #friendchange #view a, #menucontainer button, #error-404 a, a b, a strong, a i, a em, .ui-widget-content a, div#random-dragon a, #forum-trade-dialog .forum-crossroads-trade-user, #msg-header a, .common-dialog .common-dialog-link, #braintree-form-text a, .ui-widget-content a.common-red-text, a.common-red-text, #skinuploadcontainer a, .cc-color-override-603568657 .cc-link, .cc-color-override-603568657 .cc-link:active, .cc-color-override-603568657 .cc-link:visited, #export-outfit-dialog-confirm a {
+    a,
+    a.link,
+    .rotating-item a,
+    #menucontainer a,
+    #friendchange #view a,
+    #menucontainer button,
+    #error-404 a,
+    a b,
+    a strong,
+    a i,
+    a em,
+    .ui-widget-content a,
+    div#random-dragon a,
+    #forum-trade-dialog .forum-crossroads-trade-user,
+    #msg-header a,
+    .common-dialog .common-dialog-link,
+    #braintree-form-text a,
+    .ui-widget-content a.common-red-text,
+    a.common-red-text,
+    #skinuploadcontainer a,
+    .cc-color-override-603568657 .cc-link,
+    .cc-color-override-603568657 .cc-link:active,
+    .cc-color-override-603568657 .cc-link:visited,
+    #export-outfit-dialog-confirm a {
         color: var(--link);
     }
-    a:hover, a:focus, #super-container a:hover, .main a:hover, .rotating-item a:hover, .breadcrumbs a:hover, .breadcrumbs a.lastlink:hover, .gamedb-bbcode:hover, #menucontainer a:hover, #menucontainer button:hover, #friendchange #view a:hover, #error-404 a:hover, a:hover b, a:hover strong, a:hover i, a:hover em, div#random-dragon a:hover, #forum-trade-dialog .forum-crossroads-trade-user:hover, #msg-header a:hover, .common-dialog .common-dialog-link:hover, #braintree-form-text a:hover, .common-tab:hover a, .ui-widget-content a.common-red-text:hover, a.common-red-text:hover, #skinuploadcontainer a:hover, .cc-link:hover, #export-outfit-dialog-confirm a:hover  {
+    a:hover,
+    a:focus,
+    #super-container a:hover,
+    .main a:hover,
+    .rotating-item a:hover,
+    .breadcrumbs a:hover,
+    .breadcrumbs a.lastlink:hover,
+    .gamedb-bbcode:hover,
+    #menucontainer a:hover,
+    #menucontainer button:hover,
+    #friendchange #view a:hover,
+    #error-404 a:hover,
+    a:hover b,
+    a:hover strong,
+    a:hover i,
+    a:hover em,
+    div#random-dragon a:hover,
+    #forum-trade-dialog .forum-crossroads-trade-user:hover,
+    #msg-header a:hover,
+    .common-dialog .common-dialog-link:hover,
+    #braintree-form-text a:hover,
+    .common-tab:hover a,
+    .ui-widget-content a.common-red-text:hover,
+    a.common-red-text:hover,
+    #skinuploadcontainer a:hover,
+    .cc-link:hover,
+    #export-outfit-dialog-confirm a:hover {
         color: var(--link-hover);
     }
     /*dividers*/
-    hr, hr.announce-separator, .ah-search-submit-container hr {
+    hr,
+    hr.announce-separator,
+    .ah-search-submit-container hr {
         background-color: var(--divider) !important;
         color: var(--divider) !important;
     }
     .dgnres-index .common-column:nth-child(2) .common-column-content,
-    .dgnres-table tr, .common-table tr, hr.skin-system-hr {
+    .dgnres-table tr,
+    .common-table tr,
+    hr.skin-system-hr {
         border-color: var(--divider)
     }
-    img[src*="/images/layout/graydot.gif"], img[src*="/static/layout/graydot.gif"], img.divider {
+    img[src*="/images/layout/graydot.gif"],
+    img[src*="/static/layout/graydot.gif"],
+    img.divider {
         opacity: 0.2;
     }
     /*alerts*/
-    .statdiv span #alerticon, #trade-chat span, #messicon, #frenicon, span.pending-avatar-msg-count,
+    .statdiv span #alerticon,
+    #trade-chat span,
+    #messicon,
+    #frenicon,
+    span.pending-avatar-msg-count,
     #alertimg + #alert[style] > div[style*="background-image:"] {
         background: none !important;
         position: relative;
@@ -939,8 +1028,12 @@ adblock2 "Disable" <<<EOT  EOT;
         color: var(--button-text) !important;
         text-shadow: -1px 0 0 var(--shadow), 1px 0 0 var(--shadow), -1px 1px 0 var(--shadow), 1px 1px 0 var(--shadow), -1px 2px 0 var(--shadow), 1px 2px 0 var(--shadow), -1px -1px 0 var(--shadow), 1px -1px 0 var(--shadow), 0 -1px 0 var(--shadow);
     }
-    .statdiv span #alerticon::before, #alertimg + #alert[style] > div[style*="background-image:"]::before,
-    #trade-chat span::before, #messicon::before, #frenicon::before, span.pending-avatar-msg-count::before {
+    .statdiv span #alerticon::before,
+    #alertimg + #alert[style] > div[style*="background-image:"]::before,
+    #trade-chat span::before,
+    #messicon::before,
+    #frenicon::before,
+    span.pending-avatar-msg-count::before {
         content: '';
         position: absolute;
         top: 0;
@@ -958,7 +1051,9 @@ adblock2 "Disable" <<<EOT  EOT;
         border: 1px solid var(--energy-border);
         background-image: linear-gradient(to bottom, var(--energy-two) 0%, var(--energy-one) 100%);
     }
-    .common-hub-item-alert, .archaeology-dig-site-index-row-badge, .ah-alert-badge {
+    .common-hub-item-alert,
+    .archaeology-dig-site-index-row-badge,
+    .ah-alert-badge {
         color: var(--button-text);
         border: 1px solid var(--energy-border);
         background: var(--energy-two);
@@ -971,36 +1066,51 @@ adblock2 "Disable" <<<EOT  EOT;
         padding: 2px;
     }
     .common-hub-item-alert:before {
-        border: 1px solid rgba(255,255,255,0.5);
+        border: 1px solid rgba(255, 255, 255, 0.5);
     }
     /*alert list popup*/
-    a.alertuser, div.alert-v2-text a {
+    a.alertuser,
+    div.alert-v2-text a {
         color: var(--text);
     }
-    a.alertuser, div.alert-v2-text a[style], #alerts-see-all-v2 a {
+    a.alertuser,
+    div.alert-v2-text a[style],
+    #alerts-see-all-v2 a {
         color: var(--link) !important;
     }
-    a.alertuser:hover, a.alertuser:focus, div.alert-v2-text a[style]:hover, div.alert-v2-text a[style]:focus, #alerts-see-all-v2 a:hover, #alerts-see-all-v2 a:focus {
+    a.alertuser:hover,
+    a.alertuser:focus,
+    div.alert-v2-text a[style]:hover,
+    div.alert-v2-text a[style]:focus,
+    #alerts-see-all-v2 a:hover,
+    #alerts-see-all-v2 a:focus {
         color: var(--link-hover) !important;
     }
-    #alertlist.alertlist-v2, #alertwin {
+    #alertlist.alertlist-v2,
+    #alertwin {
         padding: 0;
         border-radius: 7px;
     }
-    #alertlist.alertlist-v2 .ui-widget-content a, #alertwin .ui-widget-content a, 
-    #alertlist > a > .alert-v2, #alertwin > a > .alert-v2 {
+    #alertlist.alertlist-v2 .ui-widget-content a,
+    #alertwin .ui-widget-content a,
+    #alertlist > a > .alert-v2,
+    #alertwin > a > .alert-v2 {
         color: var(--text)
     }
-    #alertlist div.alert-v2.alert-v2-unread, #alertwin div.alert-v2.alert-v2-unread {
+    #alertlist div.alert-v2.alert-v2-unread,
+    #alertwin div.alert-v2.alert-v2-unread {
         background: var(--section);
         background-image: none;
         color: var(--em)
     }
-    #alertwin .alert-v2-date, #alertlist .alert-v2-date, #status-box .status-author time, .pinglist-ping-demo {
+    #alertwin .alert-v2-date,
+    #alertlist .alert-v2-date,
+    #status-box .status-author time,
+    .pinglist-ping-demo {
         color: var(--text-med)
     }
     #alertlist div.alert-v2.alert-v2-unread::after,
-    #alertwin div.alert-v2.alert-v2-unread::after, 
+    #alertwin div.alert-v2.alert-v2-unread::after,
     #alertlist a[href$="/trading/archaeology/dig-sites"] div.alert-v2::after,
     #alertwin a[href$="/trading/archaeology/dig-sites"] div.alert-v2::after,
     #alertlist a[href*="/auction-house/activity/"] div.alert-v2::after,
@@ -1016,7 +1126,8 @@ adblock2 "Disable" <<<EOT  EOT;
         border-radius: 3px;
         font-size: 8px;
     }
-    #alertlist a[href$="/trading/baldwin/transmute"] div.alert-v2.alert-v2-unread::after, #alertwin  a[href$="/trading/baldwin/transmute"] div.alert-v2.alert-v2-unread::after,
+    #alertlist a[href$="/trading/baldwin/transmute"] div.alert-v2.alert-v2-unread::after,
+    #alertwin a[href$="/trading/baldwin/transmute"] div.alert-v2.alert-v2-unread::after,
     #alertlist a[href$="/trading/archaeology/dig-sites"] div.alert-v2::after,
     #alertwin a[href$="/trading/archaeology/dig-sites"] div.alert-v2::after,
     #alertlist a[href*="/auction-house/activity/"] div.alert-v2.alert-v2-unread::after,
@@ -1025,13 +1136,19 @@ adblock2 "Disable" <<<EOT  EOT;
     #alertwin a[href*="/auction-house/activity/"] div.alert-v2::after {
         content: '⟡';
     }
-    #alertlist > a, #alertwin > a {
+    #alertlist > a,
+    #alertwin > a {
         display: block;
     }
-    #alertlist > *:nth-child(2n+1):not(#alerts-see-all-v2):not(.alert-v2-unread), #alertwin > *:nth-child(2n+1):not(#alerts-see-all-v2):not(.alert-v2-unread) {
+    #alertlist > *:nth-child(2n+1):not(#alerts-see-all-v2):not(.alert-v2-unread),
+    #alertwin > *:nth-child(2n+1):not(#alerts-see-all-v2):not(.alert-v2-unread) {
         background: var(--widget-med);
     }
-    #alertlist .alert-v2, #alertlist .alert-v2.alert-v2-darkline, #alertwin .alert-v2.alert-v2-darkline, #alertwin .alert-v2, #status-box .status-row {
+    #alertlist .alert-v2,
+    #alertlist .alert-v2.alert-v2-darkline,
+    #alertwin .alert-v2.alert-v2-darkline,
+    #alertwin .alert-v2,
+    #status-box .status-row {
         border-bottom: 1px solid var(--borders-med) !important;
     }
     #alerts-see-all-v2 {
@@ -1053,11 +1170,11 @@ adblock2 "Disable" <<<EOT  EOT;
     }
     /*adjust default site bg based on hue*/
     body[style*="/static/layout/none/bg.jpg"],
-     body[style*="/layout/none/background.jpg"]{
+    body[style*="/layout/none/background.jpg"] {
         background: none !important;
     }
     body[style*="/static/layout/none/bg.jpg"]::before,
-    body[style*="/layout/none/background.jpg"]::before{
+    body[style*="/layout/none/background.jpg"]::before {
         content: '';
         z-index: -1;
         background-color: var(--background);
@@ -1073,10 +1190,12 @@ adblock2 "Disable" <<<EOT  EOT;
         height: 100%;
     }
     /*unset bgs*/
-    .home-contentcontainer, .loginarea, .contentcontainer {
+    .home-contentcontainer,
+    .loginarea,
+    .contentcontainer {
         background-image: none;
     }
-    
+
     /*remove non-transparent internal bgs*/
     .main[style*="internal_bg.jpg"],
     .main[style*="vault_bg.jpg"],
@@ -1085,7 +1204,7 @@ adblock2 "Disable" <<<EOT  EOT;
     .main[style*="/bg_crossroads_start_offset.jpg"] {
         background: none !important;
     }
-    
+
     /*re-add bgs across site using scenes*/
     /*z-index fixes*/
     div.contentcontainer div.main[style*="/bestiary/internal_bg.jpg"],
@@ -1202,7 +1321,9 @@ adblock2 "Disable" <<<EOT  EOT;
         background-repeat: no-repeat;
     }
     /*tooltips*/
-    div.common-tooltip-box, .raffle-dragon .raffle-dragon-tooltip, .faire-tooltip {
+    div.common-tooltip-box,
+    .raffle-dragon .raffle-dragon-tooltip,
+    .faire-tooltip {
         color: var(--text);
         background: var(--tooltip-bg);
         border: 0px solid var(--borders);
@@ -1210,29 +1331,40 @@ adblock2 "Disable" <<<EOT  EOT;
         border-radius: 10px;
         font-size: 12px;
     }
-    .raffle-dragon .raffle-dragon-tooltip .raffle-dragon-tooltip-title, .faire-tooltip {
+    .raffle-dragon .raffle-dragon-tooltip .raffle-dragon-tooltip-title,
+    .faire-tooltip {
         color: var(--strong);
         border-color: var(--divider);
     }
-    .dragontip *[style*="color"], div.cluetip-inner.ui-cluetip-content div[style*="color"], .faire-tooltip .header h1 {
+    .dragontip *[style*="color"],
+    div.cluetip-inner.ui-cluetip-content div[style*="color"],
+    .faire-tooltip .header h1 {
         color: var(--strong) !important;
     }
-    .dragontip *[style*="#999"], div.cluetip-inner.ui-cluetip-content div[style*="#999"], .ways_toggle span {
+    .dragontip *[style*="#999"],
+    div.cluetip-inner.ui-cluetip-content div[style*="#999"],
+    .ways_toggle span {
         color: var(--text-med) !important;
     }
-    .dragontip *[style*="#000"], div.cluetip-inner.ui-cluetip-content div[style*="#000"], .faire-tooltip div:last-child {
+    .dragontip *[style*="#000"],
+    div.cluetip-inner.ui-cluetip-content div[style*="#000"],
+    .faire-tooltip div:last-child {
         color: var(--text) !important;
     }
-    .dragontip div[style*="url(/static/layout/tt_grad.jpg)"], div.cluetip-inner.ui-cluetip-content div[style*="layout/tt_grad.jpg"], .faire-tooltip .header {
+    .dragontip div[style*="url(/static/layout/tt_grad.jpg)"],
+    div.cluetip-inner.ui-cluetip-content div[style*="layout/tt_grad.jpg"],
+    .faire-tooltip .header {
         background: linear-gradient(to right, var(--widget-med) 0%, var(--widget) 100%) !important;
     }
-    /*pop-up modals*/ 
-    .ui-widget, .ui-widget.ui-widget-content {
+    /*pop-up modals*/
+    .ui-widget,
+    .ui-widget.ui-widget-content {
         background: var(--widget);
         border-color: var(--borders);
         color: var(--accent-four);
     }
-    .item-tooltip, .ui-dialog {
+    .item-tooltip,
+    .ui-dialog {
         border: 3px solid var(--borders);
         border-radius: 10px;
         box-shadow: none;
@@ -1240,29 +1372,41 @@ adblock2 "Disable" <<<EOT  EOT;
     .ui-widget.item-tooltip {
         background: var(--tooltip-bg);
     }
-    div.cluetip-inner.ui-cluetip-content, .cluetip.ui-widget {
+    div.cluetip-inner.ui-cluetip-content,
+    .cluetip.ui-widget {
         background: var(--tooltip-bg);
     }
-    .common-dialog .common-dialog-diagram, .common-currency-box-treasure, .common-currency-box-treasure-discount, .common-currency-box-gems, .common-currency-box-achievement-tokens, .common-currency-box-achievement-points, .common-currency-box-pursuit-points {
+    .common-dialog .common-dialog-diagram,
+    .common-currency-box-treasure,
+    .common-currency-box-treasure-discount,
+    .common-currency-box-gems,
+    .common-currency-box-achievement-tokens,
+    .common-currency-box-achievement-points,
+    .common-currency-box-pursuit-points {
         background-color: var(--widget-med);
         color: var(--text)
     }
     .common-bulletin-text {
-        background: rgba(var(--widget-rgb),0.95);
+        background: rgba(var(--widget-rgb), 0.95);
     }
     /*tables*/
-    .common-plain-table thead th, .common-plain-table thead td {
+    .common-plain-table thead th,
+    .common-plain-table thead td {
         border-color: var(--divider)
     }
     /*main content bgs*/
     .container {
         border-radius: 0;
     }
-    .main, .contentcontainer {
+    .main,
+    .contentcontainer {
         background-color: var(--main);
         color: var(--text);
     }
-    .threecol .contentcontainer, .leftcolumn, .rightcolumn, .home-contentcontainer {
+    .threecol .contentcontainer,
+    .leftcolumn,
+    .rightcolumn,
+    .home-contentcontainer {
         background-color: var(--columns);
     }
     .rightcolumn {
@@ -1309,10 +1453,11 @@ adblock2 "Disable" <<<EOT  EOT;
         color: var(--link-hover) !important;
     }
     /*user info tab*/
-    #usertab, #logintab {
+    #usertab,
+    #logintab {
         background: linear-gradient(to bottom, var(--widget-med) 0%, var(--widget-light) 100%) !important;
         border-radius: 10px 10px 0 0;
-        box-sizing:border-box;
+        box-sizing: border-box;
         border: 5px solid var(--bar);
         border-bottom: none;
         width: 295px;
@@ -1330,20 +1475,46 @@ adblock2 "Disable" <<<EOT  EOT;
     #usertab > * {
         z-index: 2;
     }
-    div#userdata a, #messalert, #namespan a span, #usertab a[href*="userpage"] span, #usertab .loginlinks.loginbar, .statdiv span div, .statdiv span div:hover, #usertab a[href*="userpage"] span, #usertab .loginlinks.loginbar, #logwin a[style*="color"], #frensalert, #alert  {
+    div#userdata a,
+    #messalert,
+    #namespan a span,
+    #usertab a[href*="userpage"] span,
+    #usertab .loginlinks.loginbar,
+    .statdiv span div,
+    .statdiv span div:hover,
+    #usertab a[href*="userpage"] span,
+    #usertab .loginlinks.loginbar,
+    #logwin a[style*="color"],
+    #frensalert,
+    #alert {
         color: var(--text);
         text-shadow: -1px 0 0 var(--shadow), 1px 0 0 var(--shadow), -1px 1px 0 var(--shadow), 1px 1px 0 var(--shadow), -1px 2px 0 var(--shadow), 1px 2px 0 var(--shadow), -1px -1px 0 var(--shadow), 1px -1px 0 var(--shadow), 0 -1px 0 var(--shadow)
     }
-     #namespan a span, #usertab a[href*="userpage"] span {
+    #namespan a span,
+    #usertab a[href*="userpage"] span {
         color: var(--link) !important;
     }
-    div#userdata a, .loginarea, .loginlinks, .loginlinks.loginbar, #logwin a[style*="color"], #usertab .loginlinks.loginbar:hover {
+    div#userdata a,
+    .loginarea,
+    .loginlinks,
+    .loginlinks.loginbar,
+    #logwin a[style*="color"],
+    #usertab .loginlinks.loginbar:hover {
         color: var(--text) !important;
     }
-    div#userdata a:hover, #namespan a:hover span, #usertab a[href*="userpage"]:hover span, #logwin a[style*="color"]:hover {
+    div#userdata a:hover,
+    #namespan a:hover span,
+    #usertab a[href*="userpage"]:hover span,
+    #logwin a[style*="color"]:hover {
         color: var(--link-hover) !important;
     }
-    #ltavtr, div#avatars div#avtable img, div#avatars span#currentnav img, .clan-profile-avatar, .friends-page-avatar img, .choose-vista-preview-avatar, .dragon-profile-bio-vista-avatar {
+    #ltavtr,
+    div#avatars div#avtable img,
+    div#avatars span#currentnav img,
+    .clan-profile-avatar,
+    .friends-page-avatar img,
+    .choose-vista-preview-avatar,
+    .dragon-profile-bio-vista-avatar {
         background: var(--widget);
         border: 2px solid var(--borders-med);
         outline: 2px solid var(--borders);
@@ -1353,10 +1524,12 @@ adblock2 "Disable" <<<EOT  EOT;
     #ltavtr[style] {
         background: var(--widget) !important;
     }
-    div#avatars div#avtable img:hover, .friends-page-avatar img:hover {
+    div#avatars div#avtable img:hover,
+    .friends-page-avatar img:hover {
         border-color: var(--borders-light)
     }
-    #ltavtr img, .clan-profile-avatar img {
+    #ltavtr img,
+    .clan-profile-avatar img {
         border: none !important;
         border-radius: 10px;
         box-sizing: border-box;
@@ -1376,7 +1549,8 @@ adblock2 "Disable" <<<EOT  EOT;
         height: 100%;
         position: absolute;
         background: url('https://www1.flightrising.com/static/bars/avg_energy.png');
-        top: 0; left: 0;
+        top: 0;
+        left: 0;
         filter: grayscale(100%);
     }
     #avg-energy {
@@ -1400,7 +1574,7 @@ adblock2 "Disable" <<<EOT  EOT;
         background: linear-gradient(to right, var(--energy-full-one) 0%, var(--energy-full-two) 100%);
         border: 2px solid var(--energy-full-border);
     }
-    
+
     /*Left Column Area with Adbar*/
     .navbar-glow-hover {
         color: var(--text);
@@ -1436,7 +1610,8 @@ adblock2 "Disable" <<<EOT  EOT;
         color: var(--text) !important;
         border-radius: 7px !important;
     }
-    .cc-color-override-603568657 .cc-btn:hover, .cc-color-override-603568657 .cc-btn:focus {
+    .cc-color-override-603568657 .cc-btn:hover,
+    .cc-color-override-603568657 .cc-btn:focus {
         background-color: var(--section);
     }
     a.clock-tooltip {
@@ -1446,7 +1621,9 @@ adblock2 "Disable" <<<EOT  EOT;
     .breadcrumbs {
         color: var(--strong);
     }
-    .breadcrumbs a, .breadcrumbs .tabbed-breadcrumbs a, a.headerlink {
+    .breadcrumbs a,
+    .breadcrumbs .tabbed-breadcrumbs a,
+    a.headerlink {
         color: var(--accent-four);
     }
     a.headertargetlink {
@@ -1455,14 +1632,18 @@ adblock2 "Disable" <<<EOT  EOT;
     .breadcrumbs a.lastlink {
         color: var(--accent-three)
     }
-    .breadcrumbs a:hover, .breadcrumbs .tabbed-breadcrumbs a:hover, .breadcrumbs a.lastlink:hover {
+    .breadcrumbs a:hover,
+    .breadcrumbs .tabbed-breadcrumbs a:hover,
+    .breadcrumbs a.lastlink:hover {
         color: var(--link-hover)
     }
     a.headertargetlink:hover {
         color: var(--link-hover) !important;
     }
     /*buttons*/
-    .beigebutton.thingbutton, .thingbutton, .skin-system-order-action {
+    .beigebutton.thingbutton,
+    .thingbutton,
+    .skin-system-order-action {
         color: var(--button-text);
         text-shadow: 0 1px 1px var(--shadow), 0 1px 1px var(--shadow), 0 1px 1px var(--shadow), 0 1px 2px var(--shadow);
         padding: 10px;
@@ -1474,28 +1655,42 @@ adblock2 "Disable" <<<EOT  EOT;
         align-items: center;
         flex-wrap: wrap;
     }
-    .common-ui-button::after, .common-ui-button-disabled::after, .common-ui-button-accept::after {
+    .common-ui-button::after,
+    .common-ui-button-disabled::after,
+    .common-ui-button-accept::after {
         display: none !important;
     }
-    a.beigebutton.thingbutton:not([disabled]):hover, .thingbutton:not([disabled]):hover, .skin-system-order-action:not([disabled]):hover {
+    a.beigebutton.thingbutton:not([disabled]):hover,
+    .thingbutton:not([disabled]):hover,
+    .skin-system-order-action:not([disabled]):hover {
         color: var(--button-text);
         background: linear-gradient(to top, var(--beige-button-one) 0%, var(--beige-button-two) 100%);
     }
-    .redbutton, .redbutton.anybutton, .mb_button, .skin-system-order-action.skin-system-cancel-order {
+    .redbutton,
+    .redbutton.anybutton,
+    .mb_button,
+    .skin-system-order-action.skin-system-cancel-order {
         background: linear-gradient(to bottom, var(--red-button-one) 0%, var(--red-button-two) 100%);
         color: var(--button-text);
         text-shadow: 0 1px 1px var(--shadow), 0 1px 1px var(--shadow), 0 1px 1px var(--shadow), 0 1px 2px var(--shadow);
         -webkit-box-shadow: 0 2px 3px var(--shadow);
         font-weight: bold;
     }
-    .redbutton:not([disabled]):hover, .redbutton.anybutton:not([disabled]):hover, .mb_button:not([disabled]):hover, .skin-system-order-action.skin-system-cancel-order:not([disabled]):hover {
+    .redbutton:not([disabled]):hover,
+    .redbutton.anybutton:not([disabled]):hover,
+    .mb_button:not([disabled]):hover,
+    .skin-system-order-action.skin-system-cancel-order:not([disabled]):hover {
         color: var(--button-text);
         background: linear-gradient(to top, var(--red-button-one) 0%, var(--red-button-two) 100%);
     }
-    .redbutton, .redbutton.anybutton {
+    .redbutton,
+    .redbutton.anybutton {
         padding: 10px;
     }
-    .redbutton.anybutton:disabled, .mb_button, .beigebutton.thingbutton:disabled, .skin-system-order-action.skin-system-cancel-order:disabled {
+    .redbutton.anybutton:disabled,
+    .mb_button,
+    .beigebutton.thingbutton:disabled,
+    .skin-system-order-action.skin-system-cancel-order:disabled {
         color: var(--button-text) !important;
     }
     /*dot pagination*/
@@ -1513,34 +1708,46 @@ adblock2 "Disable" <<<EOT  EOT;
         background: var(--accent-five)
     }
     /*more buttons*/
-    .common-ui-button, .lair-pagination .lair-pagination-page, .common-pagination .common-pagination-page,
-    .common-ui-vertical-button-group, .common-js-pagination .common-pagination-page, .wws-carousel-navigation-status,
+    .common-ui-button,
+    .lair-pagination .lair-pagination-page,
+    .common-pagination .common-pagination-page,
+    .common-ui-vertical-button-group,
+    .common-js-pagination .common-pagination-page,
+    .wws-carousel-navigation-status,
     .sitewide-effort-navigation-item {
         color: var(--button-text-dark);
         border: 2px solid var(--borders-med);
         background: linear-gradient(to bottom, var(--button-one) 0%, var(--button-two) 100%);
     }
-    .common-ui-button-disabled, .greybutton, .greybutton.stopbutton,
+    .common-ui-button-disabled,
+    .greybutton,
+    .greybutton.stopbutton,
     .common-ui-vertical-button-group > .common-ui-button-disabled,
-    .common-ui-vertical-button-group .common-ui-button-group .common-ui-button-disabled, .beigebutton.thingbutton:disabled {
+    .common-ui-vertical-button-group .common-ui-button-group .common-ui-button-disabled,
+    .beigebutton.thingbutton:disabled {
         background: linear-gradient(to bottom, var(--button-disabled-one) 0%, var(--button-disabled-two) 100%);
         border-color: var(--borders);
     }
-    .common-ui-vertical-button-group > .common-ui-button:last-child::after, .common-ui-vertical-button-group > .common-ui-button-disabled:last-child::after {
+    .common-ui-vertical-button-group > .common-ui-button:last-child::after,
+    .common-ui-vertical-button-group > .common-ui-button-disabled:last-child::after {
         opacity: 0.5;
         border-color: var(--text)
     }
     .common-ui-button-disabled:after {
-        border-color: rgba(255,255,255,0.1);
+        border-color: rgba(255, 255, 255, 0.1);
     }
     /*pagination buttons*/
-    .common-pagination .common-pagination-page, .common-js-pagination .common-pagination-page {
+    .common-pagination .common-pagination-page,
+    .common-js-pagination .common-pagination-page {
+        background: linear-gradient(to bottom, var(--button-one) 0%, var(--button-two) 100%);
+        border-color: var(--borders-med);
         width: auto;
         min-width: 30px;
         font-weight: bold;
         margin: auto 0.15em
     }
-    .common-pagination-page.common-pagination-page-counter, .common-pagination-page.common-pagination-page-counter:hover {
+    .common-pagination-page.common-pagination-page-counter,
+    .common-pagination-page.common-pagination-page-counter:hover {
         padding: 0 0.5em;
         min-width: 100px;
         width: auto;
@@ -1548,22 +1755,47 @@ adblock2 "Disable" <<<EOT  EOT;
     /*.common-pagination .common-pagination-page, .common-js-pagination .common-pagination-page {
         color: var(--borders-med);
     }*/
-    .common-pagination .common-pagination-page:hover, .common-js-pagination .common-pagination-page:hover, .common-pagination .common-pagination-page-space.common-pagination-page-space-hover:hover, .common-js-pagination .common-pagination-page-space.common-pagination-page-space-hover:hover,
+    .common-pagination .common-pagination-page:hover,
+    .common-js-pagination .common-pagination-page:hover,
+    .common-pagination .common-pagination-page-space.common-pagination-page-space-hover:hover,
+    .common-js-pagination .common-pagination-page-space.common-pagination-page-space-hover:hover,
     .sitewide-effort-navigation-item:not(.sitewide-effort-navigation-item-current):hover {
         border-color: var(--borders-light);
         color: var(--button-text-dark);
         background: linear-gradient(to bottom, var(--button-two) 0%, var(--button-one) 100%);
     }
-    .common-pagination .common-pagination-page-active, .common-pagination .common-pagination-page-active:hover, .common-js-pagination .common-pagination-page-active, .common-js-pagination .common-pagination-page-active:hover, .recipe-pagination .common-pagination-page[data-enabled="false"], .recipe-pagination .common-pagination-page[data-enabled="false"]:hover, .lair-pagination .lair-pagination-page-active, .lair-pagination .lair-pagination-page-active:hover, .sitewide-effort-navigation-item.sitewide-effort-navigation-item-current, .sitewide-effort-navigation-item.sitewide-effort-navigation-item-current:hover {
+    .common-pagination .common-pagination-page-active,
+    .common-pagination .common-pagination-page-active:hover,
+    .common-js-pagination .common-pagination-page-active,
+    .common-js-pagination .common-pagination-page-active:hover,
+    .recipe-pagination .common-pagination-page[data-enabled="false"],
+    .recipe-pagination .common-pagination-page[data-enabled="false"]:hover,
+    .lair-pagination .lair-pagination-page-active,
+    .lair-pagination .lair-pagination-page-active:hover,
+    .sitewide-effort-navigation-item.sitewide-effort-navigation-item-current,
+    .sitewide-effort-navigation-item.sitewide-effort-navigation-item-current:hover {
         border-color: var(--borders);
     }
-    .common-pagination .common-pagination-page-active, .common-pagination .common-pagination-page-active:hover, .common-js-pagination .common-pagination-page-active, .common-js-pagination .common-pagination-page-active:hover, .recipe-pagination .common-pagination-page[data-enabled="false"], .recipe-pagination .common-pagination-page[data-enabled="false"]:hover, .lair-pagination .lair-pagination-page-active, .lair-pagination .lair-pagination-page-active:hover, .sitewide-effort-navigation-item.sitewide-effort-navigation-item-current, .sitewide-effort-navigation-item.sitewide-effort-navigation-item-current:hover {
+    .common-pagination .common-pagination-page-active,
+    .common-pagination .common-pagination-page-active:hover,
+    .common-js-pagination .common-pagination-page-active,
+    .common-js-pagination .common-pagination-page-active:hover,
+    .recipe-pagination .common-pagination-page[data-enabled="false"],
+    .recipe-pagination .common-pagination-page[data-enabled="false"]:hover,
+    .lair-pagination .lair-pagination-page-active,
+    .lair-pagination .lair-pagination-page-active:hover,
+    .sitewide-effort-navigation-item.sitewide-effort-navigation-item-current,
+    .sitewide-effort-navigation-item.sitewide-effort-navigation-item-current:hover {
         background: linear-gradient(to bottom, var(--beige-button-one) 0%, var(--beige-button-two) 100%);
         text-shadow: 0 1px 1px var(--shadow);
         color: var(--text)
     }
     /*tooltips*/
-    .itemtip .itemdesc, .itemtip .skindesc, .itemtip .tooltip-itemid, #form-header, .itemtip .tooltip-level {
+    .itemtip .itemdesc,
+    .itemtip .skindesc,
+    .itemtip .tooltip-itemid,
+    #form-header,
+    .itemtip .tooltip-level {
         color: var(--text)
     }
     .itemtip .sellval {
@@ -1602,18 +1834,28 @@ adblock2 "Disable" <<<EOT  EOT;
     .itemtip.rarity-2 .itemname .itemtitle {
         color: #deffd0;
     }
-    .rarity-0 .itemname, .rarity-1 .itemname {
+    .rarity-0 .itemname,
+    .rarity-1 .itemname {
         background: linear-gradient(to right, var(--tooltip-bg) 0%, #acacac80 100%);
     }
-    .itemtip.rarity-0 .itemname .itemtitle, .itemtip.rarity-1 .itemname .itemtitle {
+    .itemtip.rarity-0 .itemname .itemtitle,
+    .itemtip.rarity-1 .itemname .itemtitle {
         color: #e6e6e6;
     }
     /*item count label*/
-    .itemicon span, .swipp-mini-item span, .swipp-fullsize-item span, .baldwin-mini-item span, .baldwin-fullsize-item span {
+    .itemicon span,
+    .swipp-mini-item span,
+    .swipp-fullsize-item span,
+    .baldwin-mini-item span,
+    .baldwin-fullsize-item span {
         background: var(--section);
         color: var(--em);
     }
-    span.item-attachment span, #attachments .insert_item span, #msg-items #items .itemicon span, .itemicon.itemicon-small span, .no_insert span {
+    span.item-attachment span,
+    #attachments .insert_item span,
+    #msg-items #items .itemicon span,
+    .itemicon.itemicon-small span,
+    .no_insert span {
         background: var(--section);
         color: var(--em);
         padding: 2px 3px;
@@ -1625,7 +1867,12 @@ adblock2 "Disable" <<<EOT  EOT;
         box-sizing: border-box;
     }
     /*attached items*/
-    #dragonattach, #attach-items, #fundage, .trade-picker #fundage, #msg-items #attachments, #msg-items #items {
+    #dragonattach,
+    #attach-items,
+    #fundage,
+    .trade-picker #fundage,
+    #msg-items #attachments,
+    #msg-items #items {
         border: 2px solid var(--borders-med);
         background: linear-gradient(to top, var(--widget-light) 0%, var(--widget-med) 100%);
     }
@@ -1635,27 +1882,38 @@ adblock2 "Disable" <<<EOT  EOT;
     #msg-items div img {
         background: none;
     }
-    .attach-item, .display-item {
+    .attach-item,
+    .display-item {
         background: var(--widget);
         border-color: var(--borders);
         border-radius: 4px;
     }
     /*hoard item picker*/
-    #fromhoard #inner #itempage, .generic-item-page, #fromhoard #inner #itembox {
+    #fromhoard #inner #itempage,
+    .generic-item-page,
+    #fromhoard #inner #itembox {
         background: var(--widget-med);
         color: var(--em);
         border: 2px solid var(--borders-med)
     }
-    #fromhoard a[style*="#000"], #fromhoard a[style*="rgb(0, 0, 0)"] {
+    #fromhoard a[style*="#000"],
+    #fromhoard a[style*="rgb(0, 0, 0)"] {
         color: var(--link) !important;
     }
-    #fromhoard a[style*="#731d08"], #fromhoard a[style*="rgb(115, 29, 8)"],
-    #fromhoard a[style*="#000"]:hover, #fromhoard a[style*="#000"]:focus,
-    #fromhoard a[style*="rgb(0, 0, 0)"]:hover, #fromhoard a[style*="rgb(0, 0, 0)"]:focus {
+    #fromhoard a[style*="#731d08"],
+    #fromhoard a[style*="rgb(115, 29, 8)"],
+    #fromhoard a[style*="#000"]:hover,
+    #fromhoard a[style*="#000"]:focus,
+    #fromhoard a[style*="rgb(0, 0, 0)"]:hover,
+    #fromhoard a[style*="rgb(0, 0, 0)"]:focus {
         color: var(--link-hover) !important;
     }
     /*content*/
-    .content-header, .menu_header span, h1, #error-404 span, #pl_headerBig {
+    .content-header,
+    .menu_header span,
+    h1,
+    #error-404 span,
+    #pl_headerBig {
         color: var(--strong);
         text-shadow: 0 0 0.2em var(--shadow), 0 0 0.2em var(--shadow), 0 0 0.2em var(--shadow) !important;
     }
@@ -1671,15 +1929,24 @@ adblock2 "Disable" <<<EOT  EOT;
         font-size: 12px;
     }
     /* ui messages */
-    .common-message strong, .common-message b, .common-message em, .common-message i,
-    .common-dialog-message strong, .common-dialog-message b, .common-dialog-message em, .common-dialog-message i,
-    .info-box strong, .info-box b, .info-box em, .info-box i {
+    .common-message strong,
+    .common-message b,
+    .common-message em,
+    .common-message i,
+    .common-dialog-message strong,
+    .common-dialog-message b,
+    .common-dialog-message em,
+    .common-dialog-message i,
+    .info-box strong,
+    .info-box b,
+    .info-box em,
+    .info-box i {
         color: inherit;
     }
     .common-dialog-warning {
         padding: 10px 10px 10px 30px;
         color: var(--warning-text);
-        background-color: rgba(var(--warning),0.1);
+        background-color: rgba(var(--warning), 0.1);
         text-align: center;
         border: 2px solid rgb(var(--warning));
         background-position: 5px 50%;
@@ -1688,18 +1955,20 @@ adblock2 "Disable" <<<EOT  EOT;
         background: var(--widget-med);
         border-color: var(--borders)
     }
-    .common-message li::marker, div.search-errors li::marker {
+    .common-message li::marker,
+    div.search-errors li::marker {
         color: inherit;
     }
-    .common-message-info, .dgnres-select .info-box {
+    .common-message-info,
+    .dgnres-select .info-box {
         color: var(--warning-text);
         border-color: rgb(var(--warning));
-        background-color: rgba(var(--warning),0.08);
+        background-color: rgba(var(--warning), 0.08);
     }
     #wikitext div[style*="url(/images/layout/message_icons/information.png)"] {
         color: var(--warning-text) !important;
         border-color: rgb(var(--warning)) !important;
-        background-color: rgba(var(--warning),0.08) !important;
+        background-color: rgba(var(--warning), 0.08) !important;
     }
     div.search-errors {
         border: 1px solid;
@@ -1707,50 +1976,62 @@ adblock2 "Disable" <<<EOT  EOT;
     .common-message-info a {
         color: rgb(var(--warning));
     }
-    .common-message-info a:hover, .common-message-info a:hover > * {
+    .common-message-info a:hover,
+    .common-message-info a:hover > * {
         color: var(--warning-text);
     }
     .common-message-info a[style*="color"] {
-         color: rgb(var(--warning)) !important;
+        color: rgb(var(--warning)) !important;
     }
     .common-message-info a[style*="color"]:hover {
-         color: var(--warning-text) !important;
+        color: var(--warning-text) !important;
     }
-    .common-message-error, div.search-errors {
+    .common-message-error,
+    div.search-errors {
         color: var(--error-text);
         border-color: rgb(var(--error));
-        background-color: rgba(var(--error),0.08);
+        background-color: rgba(var(--error), 0.08);
     }
-    .common-message-error a, div.search-errors a {
+    .common-message-error a,
+    div.search-errors a {
         color: rgb(var(--error));
     }
-    .common-message-error a:hover, .common-message-error a:hover > *, div.search-errors a:hover, div.search-errors a:hover > * {
+    .common-message-error a:hover,
+    .common-message-error a:hover > *,
+    div.search-errors a:hover,
+    div.search-errors a:hover > * {
         color: var(--error-text);
     }
     .common-message-success {
         color: var(--success-text);
         border-color: rgb(var(--success));
-        background-color: rgba(var(--success),0.08);
+        background-color: rgba(var(--success), 0.08);
     }
     .common-message-success a {
         color: rgb(var(--success));
     }
-    .common-message-success a:hover, .common-message-success a:hover > * {
+    .common-message-success a:hover,
+    .common-message-success a:hover > * {
         color: var(--success-text);
     }
-    #noauth-container h1, #noauth-container h3 {
+    #noauth-container h1,
+    #noauth-container h3 {
         color: rgb(var(--error));
     }
     *[style*="color: #FF0000;"] {
         color: rgb(var(--error)) !important;
     }
     /*dark text inputs*/
-    input, select, .common-filter input[type="text"],
+    input,
+    select,
+    .common-filter input[type="text"],
     .common-filter input[type="number"],
     .common-filter input[type="date"],
     .common-filter input[type="datetime-local"],
     .common-filter select,
-    .input_reg, .input_reg:hover, .input_reg:focus {
+    .input_reg,
+    .input_reg:hover,
+    .input_reg:focus {
         background-color: var(--columns);
         color: var(--text);
         border: 1px solid var(--borders);
@@ -1760,12 +2041,17 @@ adblock2 "Disable" <<<EOT  EOT;
     .input_reg {
         font-weight: normal;
     }
-    input#paypal_submit1, input#paypal_submit2, input#paypal_submit3, input#paypal_submit4, input#paypal_submit5 {
+    input#paypal_submit1,
+    input#paypal_submit2,
+    input#paypal_submit3,
+    input#paypal_submit4,
+    input#paypal_submit5 {
         background: none !important;
         padding: 0px !important;
     }
     /*general tables*/
-    table:not(.bbcode_columns):not([id]) thead, table#userlist thead {
+    table:not(.bbcode_columns):not([id]) thead,
+    table#userlist thead {
         background: var(--tooltip-header);
     }
     table#userlist {
@@ -1780,23 +2066,27 @@ adblock2 "Disable" <<<EOT  EOT;
     table:not(.bbcode_columns):not([id]) tbody tr {
         background: var(--widget)
     }
-    table:not(.bbcode_columns):not([id]) tbody tr:nth-child(2n+1) {
+    table:not(.bbcode_columns):not([id]) tbody tr:nth-child(2n + 1) {
         background: var(--widget-med)
     }
     table#userlist tbody tr[bgcolor] {
         background: var(--widget) !important
     }
-    table#userlist tbody tr[bgcolor]:nth-child(2n+1) {
+    table#userlist tbody tr[bgcolor]:nth-child(2n + 1) {
         background: var(--widget-med) !important
     }
-    table#userlist thead tr td:first-child, table#userlist thead tr td:nth-child(2), table#userlist tbody tr td:first-child, table#userlist tbody tr td:nth-child(2) {
+    table#userlist thead tr td:first-child,
+    table#userlist thead tr td:nth-child(2),
+    table#userlist tbody tr td:first-child,
+    table#userlist tbody tr td:nth-child(2) {
         padding-left: 5px;
     }
     #wikicontent #wikitext table tr {
         background: none;
     }
     /*dark textareas*/
-    textarea, textarea#message.input_reg,
+    textarea,
+    textarea#message.input_reg,
     form#new input[name="subject"],
     #msg-editor input[name="to"],
     #attachments input,
@@ -1812,7 +2102,10 @@ adblock2 "Disable" <<<EOT  EOT;
         line-height: 1.5em;
         border: 1px solid var(--borders) !important;
     }
-    textarea, #message, #message:hover, #message:focus {
+    textarea,
+    #message,
+    #message:hover,
+    #message:focus {
         background-color: var(--textarea);
         color: var(--text);
         padding: 5px 2px 5px 10px;
@@ -1828,13 +2121,20 @@ adblock2 "Disable" <<<EOT  EOT;
         color: var(--strong) !important;
     }
     /*dark select boxes*/
-    .common-filter select, .scry-id, .common-dialog .common-dialog-inset {
+    .common-filter select,
+    .scry-id,
+    .common-dialog .common-dialog-inset {
         background-color: var(--columns);
         color: var(--text);
         border: var(--borders);
         padding: 0.15em;
     }
-    .common-column-content select, select, .dragon-picker-filter-field input, .dragon-picker-filter-field select, .morphology-picker-filter-field input, .morphology-picker-filter-field select {
+    .common-column-content select,
+    select,
+    .dragon-picker-filter-field input,
+    .dragon-picker-filter-field select,
+    .morphology-picker-filter-field input,
+    .morphology-picker-filter-field select {
         background-color: var(--columns);
         color: var(--text);
         border: 1px solid var(--borders);
@@ -1849,7 +2149,8 @@ adblock2 "Disable" <<<EOT  EOT;
         -moz-border-radius: 5px;
         border-radius: 5px;
     }
-    #coli-dragonlist-controls select, #item-chooser-controls #quantity {
+    #coli-dragonlist-controls select,
+    #item-chooser-controls #quantity {
         background-color: var(--widget);
         border-color: var(--borders);
     }
@@ -1890,7 +2191,8 @@ adblock2 "Disable" <<<EOT  EOT;
     #content div.leftcolumn div.content {
         background: none !important;
     }
-    .contentcontainer > div[style*="clear"], .contentcontainer > div.clear {
+    .contentcontainer > div[style*="clear"],
+    .contentcontainer > div.clear {
         order: 3;
         width: 0px;
     }
@@ -1898,13 +2200,13 @@ adblock2 "Disable" <<<EOT  EOT;
         display: block;
         margin: auto;
     }
-    
+
     /*[[leftcol]]*/
-    
     /*[[stickymenu]]*/
-    
     /* lower brightness of divider image */
-    img[src*="/images/layout/graydot.gif"], img[src*="/static/layout/graydot.gif"], img.divider {
+    img[src*="/images/layout/graydot.gif"],
+    img[src*="/static/layout/graydot.gif"],
+    img.divider {
         opacity: 0.2;
     }
     /*pagination fixing*/
@@ -1920,11 +2222,16 @@ adblock2 "Disable" <<<EOT  EOT;
     .common-filters,
     #dragon-search-filters,
     .ah-search-options,
-    .dragon-picker-filters, .morphology-picker-filters,
+    .dragon-picker-filters,
+    .morphology-picker-filters,
     #editor-emoji-dialog .editor-emoji-dialog-filter,
-    #lair-icons-dialog .lair-page-icon-filter, #lair-icons-dialog .lair-icons-dialog-icon,
-    .settings-hub-category, .common-fieldset, .common-fieldset legend,
-    #lair-edit-page .lair-page-filters, #lair-view-page .lair-page-filters {
+    #lair-icons-dialog .lair-page-icon-filter,
+    #lair-icons-dialog .lair-icons-dialog-icon,
+    .settings-hub-category,
+    .common-fieldset,
+    .common-fieldset legend,
+    #lair-edit-page .lair-page-filters,
+    #lair-view-page .lair-page-filters {
         border: 2px solid var(--borders-light);
         outline: 2px solid var(--borders);
         background: var(--widget-med);
@@ -1943,16 +2250,19 @@ adblock2 "Disable" <<<EOT  EOT;
         background: var(--tooltip-bg);
         color: var(--strong);
     }
-    .common-multiselect-pill, .ah-multi-option {
+    .common-multiselect-pill,
+    .ah-multi-option {
         background-color: var(--widget);
         color: var(--text);
     }
-    .common-multiselect-pill:hover, .ah-multi-option:hover {
+    .common-multiselect-pill:hover,
+    .ah-multi-option:hover {
         background-color: var(--section);
         color: var(--text);
     }
     /*emoji picker*/
-    #editor-emoji-dialog .editor-emoji-dialog-emoji-item, .pinglist-emoji-list-item {
+    #editor-emoji-dialog .editor-emoji-dialog-emoji-item,
+    .pinglist-emoji-list-item {
         border: 2px solid var(--borders);
         outline: 1px solid var(--borders-light);
         background: var(--widget-med);
@@ -1963,7 +2273,8 @@ adblock2 "Disable" <<<EOT  EOT;
     .pinglist-emoji-list-item {
         margin: 5px auto;
     }
-    #editor-emoji-dialog .editor-emoji-dialog-emoji-item:hover, #lair-icons-dialog .lair-icons-dialog-icon:hover {
+    #editor-emoji-dialog .editor-emoji-dialog-emoji-item:hover,
+    #lair-icons-dialog .lair-icons-dialog-icon:hover {
         background: var(--widget-light);
     }
     /*common speech bubble*/
@@ -2004,44 +2315,55 @@ adblock2 "Disable" <<<EOT  EOT;
         border-bottom: 1px solid var(--divider);
         color: var(--text-med)
     }
-    .common-bubble-author img, .search-result-avatar img {
+    .common-bubble-author img,
+    .search-result-avatar img {
         border-radius: 10px;
         background: var(--widget);
         border: 2px solid var(--borders-med);
         outline: 2px solid var(--borders);
     }
-    .common-bubble-author img:hover, .search-result-avatar img:hover {
+    .common-bubble-author img:hover,
+    .search-result-avatar img:hover {
         border-color: var(--borders-light);
     }
-    
+
     /*common tabs*/
     .common-tab {
         border: 2px solid var(--borders-light);
         border-radius: 5px;
         background: var(--tab);
+        margin: 0 3px 5px 0;
     }
     .common-tab:hover {
         border: 2px solid var(--borders-light);
         background: var(--tab-hover);
     }
-    .common-tab-selected, .common-tab-selected:hover {
+    .common-tab-selected,
+    .common-tab-selected:hover {
         border-color: var(--accent-five);
         background: var(--tab-hover);
     }
     .common-tab a {
         color: var(--link)
     }
-    .common-tab-selected a, .common-tab-selected:hover a {
+    .common-tab-selected a,
+    .common-tab-selected:hover a {
         color: var(--link-hover)
     }
     /*fix issue w/ buttons being over alerts*/
-    .statdiv span #alerticon, #trade-chat span, #messicon, #frenicon, span.pending-avatar-msg-count {
+    .statdiv span #alerticon,
+    #trade-chat span,
+    #messicon,
+    #frenicon,
+    span.pending-avatar-msg-count {
         z-index: 2;
         position: relative;
     }
     /*add min height to pagination buttons to prevent content shift if arrow images need to load*/
-    .common-pagination .common-pagination-arrow-previous, .common-js-pagination .common-pagination-arrow-previous,
-    .common-pagination .common-pagination-arrow-next, .common-js-pagination .common-pagination-arrow-next {
+    .common-pagination .common-pagination-arrow-previous,
+    .common-js-pagination .common-pagination-arrow-previous,
+    .common-pagination .common-pagination-arrow-next,
+    .common-js-pagination .common-pagination-arrow-next {
         box-sizing: border-box;
         min-height: 32px;
     }
@@ -2060,8 +2382,8 @@ adblock2 "Disable" <<<EOT  EOT;
         width: 100%;
         height: 15px;
         border-radius: 12px 12px 0 0;
-        bottom:0px;
-        left:0;
+        bottom: 0px;
+        left: 0;
         position: absolute;
     }
     div#status-box-mid {
@@ -2081,11 +2403,14 @@ adblock2 "Disable" <<<EOT  EOT;
         margin-top: 2px;
         line-height: 1.4em;
     }
-    #status-box .status-author span, span.announce-timestamp, .search-result-timestamp {
+    #status-box .status-author span,
+    span.announce-timestamp,
+    .search-result-timestamp {
         color: var(--text-med)
     }
     /*random dragon*/
-    div#random-dragon, div#bonus-ticker  {
+    div#random-dragon,
+    div#bonus-ticker {
         background: var(--widget-med);
         overflow: visible;
         padding-top: 20px;
@@ -2099,7 +2424,8 @@ adblock2 "Disable" <<<EOT  EOT;
         width: 100%;
         height: 30px;
         position: absolute;
-        top: -18px; left: 0px;
+        top: -18px;
+        left: 0px;
     }
     /*exalt bonuses*/
     div#bonus-ticker {
@@ -2113,7 +2439,8 @@ adblock2 "Disable" <<<EOT  EOT;
         width: 100%;
         height: 30px;
         position: absolute;
-        top: -18px; left: 0px;
+        top: -18px;
+        left: 0px;
     }
     div#bonus-ticker .number-text {
         color: rgb(var(--success))
@@ -2125,7 +2452,7 @@ adblock2 "Disable" <<<EOT  EOT;
     div#social-links img:hover {
         opacity: 1;
     }
-    
+
     /*full size skin previews*/
     #spec_top {
         width: 420px;
@@ -2146,7 +2473,7 @@ adblock2 "Disable" <<<EOT  EOT;
     img#preview-image:not([src]) {
         background: var(--widget-med);
     }
-    
+
     /*npc speech bubbles*/
     .common-npc-dialog {
         background: linear-gradient(to bottom, var(--widget) 0%, var(--widget-med) 100%) !important;
@@ -2180,14 +2507,18 @@ adblock2 "Disable" <<<EOT  EOT;
         border-color: var(--borders-med) transparent transparent transparent !important;
         bottom: -32px !important;
     }
-    
+
     /*speech bubble strong*/
-    .common-npc-dialog a strong, .common-npc-dialog a em {
+    .common-npc-dialog a strong,
+    .common-npc-dialog a em {
         color: inherit;
     }
 
     /*more obvious disabled buttons*/
-    #nonewoffer, button:disabled, *[type=button]:disabled, #notrade.mb_button {
+    #nonewoffer,
+    button:disabled,
+    *[type=button]:disabled,
+    #notrade.mb_button {
         opacity: 0.45;
     }
 
@@ -2198,17 +2529,19 @@ adblock2 "Disable" <<<EOT  EOT;
     /*misc label fixes*/
     #gather_turns,
     #gather_success,
-    .gather_itemcount
-    {
+    .gather_itemcount {
         color: var(--strong);
     }
 
     #gather_turn_count,
     .common-bubble-subject,
-    .dragon-search-filters-reset, .dragon-search-filters-keep-expanded {
+    .dragon-search-filters-reset,
+    .dragon-search-filters-keep-expanded {
         color: var(--text);
     }
-    .content-header-sub, #pl_headerSmall, p.subheader {
+    .content-header-sub,
+    #pl_headerSmall,
+    p.subheader {
         color: var(--accent-four);
     }
     .content-header-sub strong {
@@ -2216,11 +2549,11 @@ adblock2 "Disable" <<<EOT  EOT;
     }
     .gather_selection_box,
     .archaeology-dig-site-index-row-details,
-    .archaeology-supply{
+    .archaeology-supply {
         background-color: var(--textarea);
         border-color: var(--borders);
     }
-    
+
     #trading-post-content .common-hub-item-button-image {
         opacity: 0.75;
         transition: opacity 0.3s;
@@ -2229,7 +2562,7 @@ adblock2 "Disable" <<<EOT  EOT;
     #trading-post-content a:focus .common-hub-item-button-image {
         opacity: 1;
     }
-    
+
     /*Support */
     div.common-hub-item-description {
         color: var(--text) !important;
@@ -2239,13 +2572,18 @@ adblock2 "Disable" <<<EOT  EOT;
         border-radius: 10px !important;
     }
     /* Close Box */
-    .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default,
+    .ui-button,
+    html .ui-button.ui-state-disabled:hover,
+    html .ui-button.ui-state-disabled:active {
         border: 2px solid var(--borders) !important;
         background: var(--section) !important;
         font-weight: normal !important;
         color: var(--widget) !important;
     }
-    
+
     .gather_container .lair-page-dragon-energy-meter-meter-full {
         background: linear-gradient(to right, var(--energy-one) 0%, var(--energy-two) 100%);
         border: 1px solid var(--energy-border);
@@ -2260,15 +2598,22 @@ adblock2 "Disable" <<<EOT  EOT;
     }
 
     /*dark scry share widget & outfit widget & pinglist widget*/
-    .scry-image .scry-image-rear, .outfit-image-rear, .pinglist-button, .pinglist-button-demo {
+    .scry-image .scry-image-rear,
+    .outfit-image-rear,
+    .pinglist-button,
+    .pinglist-button-demo {
         background: none;
         position: relative;
         z-index: 2;
     }
-    .scry-image .scry-buttons, .outfit-image .outfit-buttons {
+    .scry-image .scry-buttons,
+    .outfit-image .outfit-buttons {
         z-index: 3;
     }
-    .scry-image .scry-image-rear::before, .outfit-image-rear::before, .pinglist-button::before, .pinglist-button-demo::before {    
+    .scry-image .scry-image-rear::before,
+    .outfit-image-rear::before,
+    .pinglist-button::before,
+    .pinglist-button-demo::before {
         content: "";
         background-image: url('https://www1.flightrising.com//static/layout/scryer/bg_scrywidget.png');
         background-size: cover;
@@ -2285,10 +2630,16 @@ adblock2 "Disable" <<<EOT  EOT;
     .outfit-image-rear::before {
         background-image: url('https://www1.flightrising.com/static/layout/dressingroom/bg_outfitwidget.png');
     }
-    .pinglist-button::before, .pinglist-button-demo::before {
+    .pinglist-button::before,
+    .pinglist-button-demo::before {
         background-image: url(https://www1.flightrising.com/static/layout/pinglist/bbcode-background.png);
     }
-    .scry-image .scry-name, .forum-map-widget-frame .forum-map-widget-button-text, .settings-hub-radio-control[data-selected="0"], .outfit-name, .pinglist-button-title, .pinglist-button-subscribers {
+    .scry-image .scry-name,
+    .forum-map-widget-frame .forum-map-widget-button-text,
+    .settings-hub-radio-control[data-selected="0"],
+    .outfit-name,
+    .pinglist-button-title,
+    .pinglist-button-subscribers {
         color: var(--text) !important;
     }
     /*dark map poi share widget*/
@@ -2317,10 +2668,10 @@ adblock2 "Disable" <<<EOT  EOT;
         height: 90px;
         box-sizing: border-box;
     }
-    .morphology-picker-dragon:nth-child(6n+1) {
+    .morphology-picker-dragon:nth-child(6n + 1) {
         padding-left: 0;
     }
-    .morphology-picker-dragon:nth-child(6n+6) {
+    .morphology-picker-dragon:nth-child(6n + 6) {
         padding-right: 0;
     }
     /*bottom ad banner*/
@@ -2328,7 +2679,8 @@ adblock2 "Disable" <<<EOT  EOT;
         margin: 0 auto;
         padding: 10px 0;
     }
-    #bottom-banner, #bottom-banner-center.content {
+    #bottom-banner,
+    #bottom-banner-center.content {
         max-width: 950px;
         background: var(--tab) !important;
     }
@@ -2342,17 +2694,20 @@ adblock2 "Disable" <<<EOT  EOT;
         color: var(--link) !important;
     }
     /*game db widget & pinglist widget */
-    .gamedb-bbcode, .pinglist-bbcode {
+    .gamedb-bbcode,
+    .pinglist-bbcode {
         color: var(--link) !important;
     }
-    .gamedb-bbcode:hover, .pinglist-bbcode:hover {
+    .gamedb-bbcode:hover,
+    .pinglist-bbcode:hover {
         color: var(--link-hover) !important;
         background-color: transparent;
         box-shadow: none;
         text-shadow: 0 0 5px var(--shadow);
     }
     /*vista*/
-    .scry-images, .vista-options {
+    .scry-images,
+    .vista-options {
         background: var(--widget-med);
         border-color: var(--borders);
     }
@@ -2360,28 +2715,34 @@ adblock2 "Disable" <<<EOT  EOT;
     li::marker {
         color: var(--accent-two);
     }
-    
+
     /*quotes*/
-    
-    div.bbcode_quote_body, .legacy-bbcode div.bbcode_quote_body {
+    div.bbcode_quote_body,
+    .legacy-bbcode div.bbcode_quote_body {
         background-color: rgba(var(--widget-rgb), 0.7);
         color: var(--text);
     }
-    div.bbcode_code_body, .legacy-bbcode div.bbcode_code_body {
+    div.bbcode_code_body,
+    .legacy-bbcode div.bbcode_code_body {
         background-color: #111;
         color: lime;
     }
-    div.bbcode_quote_head, div.bbcode_code_head, .legacy-bbcode div.bbcode_quote_head, .legacy-bbcode div.bbcode_code_head {
+    div.bbcode_quote_head,
+    div.bbcode_code_head,
+    .legacy-bbcode div.bbcode_quote_head,
+    .legacy-bbcode div.bbcode_code_head {
         background-color: var(--tooltip-header);
         color: var(--text);
         border-bottom: 1px solid var(--borders);
     }
-    div.bbcode_quote, div.bbcode_code {
+    div.bbcode_quote,
+    div.bbcode_code {
         border-width: 1px;
         border-style: solid;
         border-color: var(--borders);
     }
-    .legacy-bbcode div.bbcode_quote, .legacy-bbcode div.bbcode_code {
+    .legacy-bbcode div.bbcode_quote,
+    .legacy-bbcode div.bbcode_code {
         border-color: var(--borders)
     }
     div#bbcode-tag-bar {
@@ -2389,7 +2750,6 @@ adblock2 "Disable" <<<EOT  EOT;
     }
 
     /*[[adblock]]*/
-    
     /*[[modal-buttons]]*/
 }
 @-moz-document regexp("(http|https):\\/\\/(|www\\.)flightrising\\.com/main\\.php\\?p=settings.*") {
@@ -2407,7 +2767,7 @@ adblock2 "Disable" <<<EOT  EOT;
     #super-container > div:nth-child(3) > img[src*="graydot"] {
         display: none !important;
     }
-    #super-container  > div:nth-child(3) > *,
+    #super-container > div:nth-child(3) > *,
     #super-container div[style="position:absolute; width:280px; top:0px; left:20px;"] > *,
     #super-container div[style="position:absolute; width:375px; top:0px; right:0px;"] > *,
     #remove_referral_option > * {
@@ -2468,14 +2828,12 @@ adblock2 "Disable" <<<EOT  EOT;
     }
 }
 @-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/main\\.php.*") {
-    
+
     /* Old Layout Fixes  */
-    
     img#internal_bg[src="/images/layout/scrying/internal_bg.jpg"],
     img#internal_bg[src="/images/layout/wiki/internal_bg.jpg"],
     img#internal_bg[src="/images/layout/search/internal_bg.jpg"],
-    img#internal_bg[src="/images/layout/faire/internal_bg.jpg"]
-    {
+    img#internal_bg[src="/images/layout/faire/internal_bg.jpg"] {
         display: none !important;
     }
     img#internal_bg + #super-container {
@@ -2520,13 +2878,16 @@ adblock2 "Disable" <<<EOT  EOT;
         font-size: 10px !important;
         color: #000 !important;
     }
-    *[style*="color:#731d08"]:not(input), *[style*="color: #731d08"]:not(input) {
+    *[style*="color:#731d08"]:not(input),
+    *[style*="color: #731d08"]:not(input) {
         color: var(--strong) !important;
     }
-    a[style*="color:#731d08"], a[style*="color: #731d08"] {
+    a[style*="color:#731d08"],
+    a[style*="color: #731d08"] {
         color: var(--link) !important;
     }
-    a[style*="color:#731d08"]:hover, a[style*="color: #731d08"]:hover {
+    a[style*="color:#731d08"]:hover,
+    a[style*="color: #731d08"]:hover {
         color: var(--link-hover) !important;
     }
     *[style*="color:#999"] {
@@ -2552,7 +2913,8 @@ adblock2 "Disable" <<<EOT  EOT;
         height: 100%;
         position: absolute;
         background: url('https://www1.flightrising.com/static/bars/avg_energy.png');
-        top: 0; left: 0;
+        top: 0;
+        left: 0;
         filter: grayscale(100%);
     }
     #usertab a.clue_nrg > div:first-child div[style*="url(images/bars/avg_energy.png)"] {
@@ -2576,30 +2938,36 @@ adblock2 "Disable" <<<EOT  EOT;
         background: linear-gradient(to right, var(--energy-full-one) 0%, var(--energy-full-two) 100%);
         border: 2px solid var(--energy-full-border);
     }
-    
-    div#avatars div#avcontent > div:nth-child(2) > img, div#avatars #currentav img, .fr-search-result-user-portrait {
+
+    div#avatars div#avcontent > div:nth-child(2) > img,
+    div#avatars #currentav img,
+    .fr-search-result-user-portrait {
         background: var(--widget);
         border: 2px solid var(--borders-med) !important;
         outline: 2px solid var(--borders);
         border-radius: 10px;
     }
-    div#avatars div#avcontent > div:nth-child(2) > img:hover, .fr-search-result-user-portrait:hover {
+    div#avatars div#avcontent > div:nth-child(2) > img:hover,
+    .fr-search-result-user-portrait:hover {
         border-color: var(--borders-light) !important;
     }
     /*breadcrumbs*/
-    #super-container > div[style="font-size:12px; color:#000;"], #pl_blinkDiv {
+    #super-container > div[style="font-size:12px; color:#000;"],
+    #pl_blinkDiv {
         color: var(--strong) !important;
     }
-    #super-container > div[style="font-size:12px; color:#000;"] a[style*="#000"], #pl_blinkDiv .pl_blink {
+    #super-container > div[style="font-size:12px; color:#000;"] a[style*="#000"],
+    #pl_blinkDiv .pl_blink {
         color: var(--accent-four) !important;
     }
-    #super-container > div[style="font-size:12px; color:#000;"] a[style*="color:#731d08;"], #pl_blinkDiv .pl_rlink {
+    #super-container > div[style="font-size:12px; color:#000;"] a[style*="color:#731d08;"],
+    #pl_blinkDiv .pl_rlink {
         color: var(--strong) !important;
     }
     #pl_blinkDiv .pl_blink:hover {
         color: var(--link-hover) !important;
     }
-    
+
     /*content header*/
     #super-container span[style="font-size:22px; text-align:left; color:#731d08; font-weight:bold; position:absolute; top:20px; left:52px;"] {
         color: var(--strong) !important;
@@ -2627,14 +2995,16 @@ adblock2 "Disable" <<<EOT  EOT;
     }
 }
 
-@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/clan-profile.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/clan\\/settings.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/friends.*") {
+@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/clan-profile.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/clan\\/settings.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/friends.*") {
     /* Clan Profiles & Friends Page  */
-    
     .clan-profile-header {
         color: var(--accent-four);
-text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 0px var(--shadow), -2px 1px 0px var(--shadow), -2px 2px 0px var(--shadow), -1px -2px 0px var(--shadow), -1px -1px 0px var(--shadow), -1px 0px 0px var(--shadow), -1px 1px 0px var(--shadow), -1px 2px 0px var(--shadow), 0px -2px 0px var(--shadow), 0px -1px 0px var(--shadow), 0px 0px 0px var(--shadow), 0px 1px 0px var(--shadow), 0px 2px 0px var(--shadow), 1px -2px 0px var(--shadow), 1px -1px 0px var(--shadow), 1px 0px 0px var(--shadow), 1px 1px 0px var(--shadow), 1px 2px 0px var(--shadow), 2px -2px 0px var(--shadow), 2px -1px 0px var(--shadow), 2px 0px 0px var(--shadow), 2px 1px 0px var(--shadow), 2px 2px 0px var(--shadow);
+        text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 0px var(--shadow), -2px 1px 0px var(--shadow), -2px 2px 0px var(--shadow), -1px -2px 0px var(--shadow), -1px -1px 0px var(--shadow), -1px 0px 0px var(--shadow), -1px 1px 0px var(--shadow), -1px 2px 0px var(--shadow), 0px -2px 0px var(--shadow), 0px -1px 0px var(--shadow), 0px 0px 0px var(--shadow), 0px 1px 0px var(--shadow), 0px 2px 0px var(--shadow), 1px -2px 0px var(--shadow), 1px -1px 0px var(--shadow), 1px 0px 0px var(--shadow), 1px 1px 0px var(--shadow), 1px 2px 0px var(--shadow), 2px -2px 0px var(--shadow), 2px -1px 0px var(--shadow), 2px 0px 0px var(--shadow), 2px 1px 0px var(--shadow), 2px 2px 0px var(--shadow);
     }
-    .clan-profile-username.clan-profile-header, .clan-profile-icon {
+    .clan-profile-username.clan-profile-header,
+    .clan-profile-icon {
         text-shadow: var(--stroke);
         color: var(--text);
         font-weight: bold;
@@ -2645,13 +3015,14 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         color: var(--strong);
         text-shadow: 0 0 0.2em var(--shadow), 0 0 0.2em var(--shadow), 0 0 0.2em var(--shadow) !important;
     }
-    
+
     .clan-profile-stat strong,
     .clan-profile-activity-text strong {
         color: var(--strong);
     }
     #clan-profile-header .clan-profile-header-subtitle,
-    .clan-profile-bio-empty, .clan-profile-comment-empty-text,
+    .clan-profile-bio-empty,
+    .clan-profile-comment-empty-text,
     .common-limited-textarea-footer {
         color: var(--text);
     }
@@ -2659,7 +3030,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .common-limited-textarea-footer strong {
         color: var(--strong) !important;
     }
-    
+
     .clan-profile-user-frame {
         background: linear-gradient(to bottom, var(--widget) 0%, var(--widget-med) 50%);
         border-color: var(--borders);
@@ -2674,7 +3045,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .clan-profile-comments-buttons {
         border-color: var(--borders-med);
     }
-    .clan-profile-forum-posts-footer a::after, .clan-profile-activities-footer a::after {
+    .clan-profile-forum-posts-footer a::after,
+    .clan-profile-activities-footer a::after {
         content: ' ...';
         font-weight: normal;
         font-size: 0.5em;
@@ -2688,20 +3060,22 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         width: 100%;
         line-height: 100%;
         height: 18px;
-        box-sizing:border-box;
+        box-sizing: border-box;
         padding: 0 5px;
     }
-    .clan-profile-forum-post-empty-timestamp, .clan-profile-activity-empty-timestamp, .clan-profile-achievement-empty-timestamp,
-    .clan-profile-forum-post-empty-text, .clan-profile-activity-empty-text, .clan-profile-achievement-empty-text,
+    .clan-profile-forum-post-empty-timestamp,
+    .clan-profile-activity-empty-timestamp,
+    .clan-profile-achievement-empty-timestamp,
+    .clan-profile-forum-post-empty-text,
+    .clan-profile-activity-empty-text,
+    .clan-profile-achievement-empty-text,
     .clan-profile-comment-empty-avatar,
     .clan-profile-comment-empty-text,
-    .clan-profile-friend-empty
-    {
+    .clan-profile-friend-empty {
         background-color: var(--section);
     }
     .clan-profile-comment-empty[data-gradient] .clan-profile-comment-empty-avatar,
-    .clan-profile-comment-empty[data-gradient] .clan-profile-comment-empty-text
-    {
+    .clan-profile-comment-empty[data-gradient] .clan-profile-comment-empty-text {
         background: var(--section);
     }
     img[src*="/static/layout/clan-profile/gear.png"] {
@@ -2741,14 +3115,17 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #friends-page-form input {
         margin-top: 5px;
     }
-
 }
 @-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/dragon.*") {
     /* Dragon Profiles */
-    h2, h3, .dragon-profile-header-name {
+    h2,
+    h3,
+    .dragon-profile-header-name {
         text-shadow: 0 1px 1px var(--shadow);
     }
-    h3.dragon-profile-details-subheader a, .exalted-details-column a, .exalted-lineage-list li a  {
+    h3.dragon-profile-details-subheader a,
+    .exalted-details-column a,
+    .exalted-lineage-list li a {
         color: var(--link);
     }
     .dragon-profile-divider {
@@ -2761,7 +3138,9 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         color: var(--accent-four);
         text-shadow: 0 1px 1px var(--shadow);
     }
-    #dragon-profile-exalt-confirm-dialog div p, .choose-scene-current-name, .choose-familiar-preview-name {
+    #dragon-profile-exalt-confirm-dialog div p,
+    .choose-scene-current-name,
+    .choose-familiar-preview-name {
         color: var(--accent-three);
     }
     .choose-scene-current-name {
@@ -2777,7 +3156,9 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         padding-right: 3px;
         margin-bottom: -4px;
     }
-    .dragon-profile-energy-text, .dragon-profile-familiar-bond-level, .choose-familiar-preview-bond-level {
+    .dragon-profile-energy-text,
+    .dragon-profile-familiar-bond-level,
+    .choose-familiar-preview-bond-level {
         color: var(--text-med);
     }
     .dragon-profile-customize-category-groupheader {
@@ -2805,10 +3186,12 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #choose-apparel-filters {
         margin-top: -5px;
     }
-    #choose-apparel-apparel-button.common-tab-big, #choose-apparel-skin-button.common-tab-big {
+    #choose-apparel-apparel-button.common-tab-big,
+    #choose-apparel-skin-button.common-tab-big {
         margin-bottom: 0;
     }
-    #dragon-profile-details-misc .dragon-profile-details-frame, .exalted-details-column .common-fieldset-inset {
+    #dragon-profile-details-misc .dragon-profile-details-frame,
+    .exalted-details-column .common-fieldset-inset {
         border: 2px solid var(--borders);
         background: var(--widget);
         border-radius: 10px;
@@ -2826,20 +3209,25 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #dragon-profile-details-misc .common-tabs {
         margin-bottom: -1px;
     }
-    #dragon-profile-dragon-frame, #dragon-profile-familiar-frame, .dragon-profile-scene-scenic-dragon, .common-animated-familiar {
+    #dragon-profile-dragon-frame,
+    #dragon-profile-familiar-frame,
+    .dragon-profile-scene-scenic-dragon,
+    .common-animated-familiar {
         filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, .5));
     }
     .dragon-profile-scene-custom::after {
         background: linear-gradient(to bottom, var(--main) 0%, rgba(255, 0, 0, 0) 25%, rgba(255, 0, 0, 0) 70%, var(--main) 100%) !important;
     }
-    .dragon-profile-scene-scenic-gradient, #dragon-profile-export-gradient {
+    .dragon-profile-scene-scenic-gradient,
+    #dragon-profile-export-gradient {
         background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 70%, var(--main) 100%) !important;
     }
     .dragon-profile-energy-meter-full {
         background: linear-gradient(to right, var(--energy-one) 0%, var(--energy-two) 100%);
         border: 1px solid var(--energy-border);
     }
-    .dragon-profile-energy-meter-full[style*="100%"], .dragon-profile-familiar-meter-frame[data-level="7"] .dragon-profile-familiar-meter-full {
+    .dragon-profile-energy-meter-full[style*="100%"],
+    .dragon-profile-familiar-meter-frame[data-level="7"] .dragon-profile-familiar-meter-full {
         background: linear-gradient(to right, var(--energy-full-one) 0%, var(--energy-full-two) 100%);
         border: 1px solid var(--energy-full-border);
     }
@@ -2850,7 +3238,9 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: linear-gradient(to right, var(--energy-one) 0%, var(--energy-two) 100%);
         border: 1px solid var(--energy-border);
     }
-    .dragon-profile-lineage, #dragon-profile-bio.dragon-profile-bio, #dragon-profile-bio.dragon-profile-vista-bio {
+    .dragon-profile-lineage,
+    #dragon-profile-bio.dragon-profile-bio,
+    #dragon-profile-bio.dragon-profile-vista-bio {
         border: 2px solid var(--borders-med);
         outline: 2px solid var(--borders);
         background: linear-gradient(to bottom, var(--widget-med) 0%, var(--widget-light) 100%);
@@ -2885,24 +3275,29 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: var(--widget-med);
         padding-left: 45px;
     }
-    .choose-scene-options, #choose-familiar-options, #choose-dragon-apparel-apparel-results .choose-dragon-apparel-scrollable-results, #choose-dragon-apparel-skin-results .choose-dragon-apparel-scrollable-results {
+    .choose-scene-options,
+    #choose-familiar-options,
+    #choose-dragon-apparel-apparel-results .choose-dragon-apparel-scrollable-results,
+    #choose-dragon-apparel-skin-results .choose-dragon-apparel-scrollable-results {
         border: 2px solid var(--borders-med);
         outline: 2px solid var(--borders);
         background: var(--widget-med);
         border-radius: 10px;
     }
-    #choose-dragon-apparel-apparel-results .choose-dragon-apparel-scrollable-results, #choose-dragon-apparel-skin-results .choose-dragon-apparel-scrollable-results {
+    #choose-dragon-apparel-apparel-results .choose-dragon-apparel-scrollable-results,
+    #choose-dragon-apparel-skin-results .choose-dragon-apparel-scrollable-results {
         padding: 5px;
         height: 262px;
     }
-    #choose-dragon-apparel-apparel-results:after, #choose-dragon-apparel-skin-results:after {
+    #choose-dragon-apparel-apparel-results:after,
+    #choose-dragon-apparel-skin-results:after {
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--main) 85%) !important;
         margin-bottom: -10px;
     }
     #choose-familiar-preview-box {
         border: 2px solid var(--borders-med);
         outline: 2px solid var(--borders);
-        background: rgba(var(--widget-rgb),0.8);
+        background: rgba(var(--widget-rgb), 0.8);
     }
     #choose-familiar-preview-remove {
         box-sizing: border-box;
@@ -2917,14 +3312,16 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .choose-vista-option {
         border: 5px solid var(--widget-med);
     }
-    .choose-vista-option.common-tooltip, .choose-vista-option[data-id="0"] {
+    .choose-vista-option.common-tooltip,
+    .choose-vista-option[data-id="0"] {
         border-radius: 10px !important;
     }
     .choose-vista-option[data-id="0"] {
         background: linear-gradient(to bottom, var(--widget-light) 0%, var(--widget) 80%);
     }
     /*apparel*/
-    .choose-dragon-apparel-slots, .choose-dragon-apparel-skin-slots {
+    .choose-dragon-apparel-slots,
+    .choose-dragon-apparel-skin-slots {
         border: 2px var(--borders-med) solid;
         outline: 2px var(--borders) solid;
         background-color: var(--section);
@@ -2936,16 +3333,17 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .choose-dragon-apparel-slot {
         border-color: var(--borders-med);
     }
-    .choose-dragon-apparel-skin-slot, .choose-dragon-apparel-slot[data-parity="even"] {
+    .choose-dragon-apparel-skin-slot,
+    .choose-dragon-apparel-slot[data-parity="even"] {
         background: var(--widget-med)
     }
     .choose-dragon-apparel-slot[data-parity="odd"] {
         background: var(--widget)
     }
-    .choose-dragon-apparel-slot-locked[data-parity="odd"]{
+    .choose-dragon-apparel-slot-locked[data-parity="odd"] {
         background: var(--section)
     }
-    .choose-dragon-apparel-slot-locked[data-parity="even"]{
+    .choose-dragon-apparel-slot-locked[data-parity="even"] {
         background: var(--borders)
     }
     .choose-dragon-apparel-slot-open-icon {
@@ -2971,16 +3369,21 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .common-ui-tabs {
         background: linear-gradient(to bottom, var(--main) 50%, var(--section) 100%);
     }
-    .common-tab-selected, .common-tab-selected:hover, .common-tab, .common-tab:hover {
+    .common-tab-selected,
+    .common-tab-selected:hover,
+    .common-tab,
+    .common-tab:hover {
         width: 167.5px;
     }
-    .common-tab-selected, .common-tab-selected:hover {
+    .common-tab-selected,
+    .common-tab-selected:hover {
         border-radius: 10px 10px 0px 0px;
         border: 2px solid var(--borders) !important;
         border-bottom: 0px solid var(--widget) !important;
         background: linear-gradient(to bottom, var(--widget) 50%, var(--widget) 100%) !important;
     }
-    .common-tab, .common-tab:hover {
+    .common-tab,
+    .common-tab:hover {
         background: linear-gradient(to bottom, var(--borders) 0%, var(--borders) 100%);
         border: 2px solid var(--borders);
         border-bottom: none;
@@ -3007,7 +3410,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #dragon-profile-apparel-items {
         width: 140px !important;
     }
-    .dragon-profile-customize-category, .settings-hub-category {
+    .dragon-profile-customize-category,
+    .settings-hub-category {
         border: 2px solid var(--borders-med);
         outline: 2px solid var(--borders);
         background: var(--widget);
@@ -3020,27 +3424,33 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     }
 
     /*dark glow around text on scenes*/
-    #dragon-profile-header, .dragon-profile-header-name, .breadcrumbs {
+    #dragon-profile-header,
+    .dragon-profile-header-name,
+    .breadcrumbs {
         text-shadow: 0 0 0.2em var(--shadow), 0 0 0.2em var(--shadow), 0 0 0.2em var(--shadow);
         color: var(--strong)
     }
-    #dragon-profile-header .dragon-profile-header-name, #dragon-profile-familiar-name, .dragon-profile-bio-header, h2.dragon-profile-details-header,
-    .exalted-details-column strong{
+    #dragon-profile-header .dragon-profile-header-name,
+    #dragon-profile-familiar-name,
+    .dragon-profile-bio-header,
+    h2.dragon-profile-details-header,
+    .exalted-details-column strong {
         color: var(--strong)
     }
     #dragon-profile-header .dragon-profile-header-subtitle {
-       color: var(--text); 
+        color: var(--text);
     }
     #dragon-profile-header .dragon-profile-header-number {
         color: var(--accent-four);
     }
-    h3.dragon-profile-details-subheader, .exalted-lineage-header {
+    h3.dragon-profile-details-subheader,
+    .exalted-lineage-header {
         color: var(--accent-three);
     }
 
     /*lower opacity of custom scenes since the default is a little too intense for the dark theme*/
     #dragon-profile-scene {
-        box-sizing:border-box;
+        box-sizing: border-box;
         opacity: 0.2;
     }
     /*set different, lower opacity for the default flight scenes*/
@@ -3058,7 +3468,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         right: 0;
         height: 100%;
         width: 100%;
-    } 
+    }
     /* add gradient over bottom of non-custom scene to match default */
     #dragon-profile-scene:not(.dragon-profile-scene-custom)::after {
         content: '';
@@ -3155,7 +3565,9 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         z-index: -1;
     }
 }
-@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/lair.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/den.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/nesting\\/.*") {
+@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/lair.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/den.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/nesting\\/.*") {
     /* Lair, Den, & Nesting Grounds  */
     .lair-tab a {
         color: var(--link)
@@ -3164,14 +3576,15 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         color: var(--link-hover)
     }
     #unlock-slots-dialog .unlock-slots-dialog-discount {
-        background: rgba(var(--success),0.15);
-        border: 1px solid rgba(var(--success),0.8);
+        background: rgba(var(--success), 0.15);
+        border: 1px solid rgba(var(--success), 0.8);
         border-radius: 5px;
         color: var(--success-text);
         padding: 5px 10px;
     }
     #unlock-slots-dialog .unlock-slots-dialog-discount strong,
-    #den-slot-unlock .den-slot-unlock-item.trade-in-icon-obtained .den-slot-unlock-item-inventory, #den-slot-unlock-list .den-slot-unlock-item.trade-in-icon-obtained .den-slot-unlock-item-inventory {
+    #den-slot-unlock .den-slot-unlock-item.trade-in-icon-obtained .den-slot-unlock-item-inventory,
+    #den-slot-unlock-list .den-slot-unlock-item.trade-in-icon-obtained .den-slot-unlock-item-inventory {
         color: rgb(var(--success));
     }
     .lair-tab-description {
@@ -3179,13 +3592,14 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         border: none;
         padding: 12px;
     }
-    #lair-edit-page #lair-tab-description textarea, #lair-edit-page #lair-tab-description .lair-tab-description-toggle {
+    #lair-edit-page #lair-tab-description textarea,
+    #lair-edit-page #lair-tab-description .lair-tab-description-toggle {
         background-color: var(--section);
         color: var(--text);
         border: none;
     }
     #lair-edit-page #lair-tab-description textarea#message {
-        font-size: 14px;
+        font-size: 11px;
     }
     #lair-edit-page #lair-tab-description-length {
         border: 2px solid var(--borders);
@@ -3200,17 +3614,20 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: var(--tab);
         border-radius: 5px;
     }
-    .lair-tab .lair-tab-move, .lair-tab:hover .lair-tab-move {
+    .lair-tab .lair-tab-move,
+    .lair-tab:hover .lair-tab-move {
         border-color: var(--borders-light)
     }
     .lair-tab:hover {
         border: 2px solid var(--borders-light);
         background: var(--widget);
     }
-    .lair-tab-selected a, .lair-tab-selected:hover a {
+    .lair-tab-selected a,
+    .lair-tab-selected:hover a {
         color: var(--strong);
     }
-    .lair-tab-selected, .lair-tab-selected:hover {
+    .lair-tab-selected,
+    .lair-tab-selected:hover {
         border-color: var(--accent-five);
         background: var(--tab-hover);
     }
@@ -3223,9 +3640,11 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #lair-edit-page .lair-page-filters::before {
         content: '';
         position: absolute;
-        height: 43px; width: 37px;
+        height: 43px;
+        width: 37px;
         background-image: url('https://www1.flightrising.com/static/layout/lair/buttons/filter-large.png');
-        top: calc(50% - 21px); left: 17px;
+        top: calc(50% - 21px);
+        left: 17px;
         filter: var(--filter) hue-rotate(var(--hue)) brightness(80%) contrast(150%);
     }
     #lair-edit-page .lair-page .lair-page-dragons {
@@ -3235,7 +3654,10 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: var(--widget-med);
         border: 2px solid var(--borders);
     }
-    #lair-edit-page .lair-page .lair-page-move, #lair-edit-page .lair-page-dragon .lair-page-dragon-box .lair-page-dragon-move, .lair-tab-selected .lair-tab-default, .lair-tab-selected .lair-tab-move {
+    #lair-edit-page .lair-page .lair-page-move,
+    #lair-edit-page .lair-page-dragon .lair-page-dragon-box .lair-page-dragon-move,
+    .lair-tab-selected .lair-tab-default,
+    .lair-tab-selected .lair-tab-move {
         color: var(--text);
         border-color: var(--borders)
     }
@@ -3261,16 +3683,17 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         border: 2px solid var(--borders);
         background: linear-gradient(to top, var(--widget-light) 0%, var(--widget-med) 100%);
     }
-    
+
     #lair-edit-page .lair-page-dragon[data-selected="true"] .lair-page-dragon-box {
         border: 2px solid rgb(var(--success));
         background: linear-gradient(to top, rgba(var(--success), 0.2) 0%, rgba(var(--success), 0.5) 100%);
     }
-    .lair-page-dragons .lair-page-dragon .lair-page-dragon-box .lair-page-dragon-name, .dragon-card .dragon-card-box .dragon-card-name {
+    .lair-page-dragons .lair-page-dragon .lair-page-dragon-box .lair-page-dragon-name,
+    .dragon-card .dragon-card-box .dragon-card-name {
         color: var(--text);
     }
     .lair-page-dragons .lair-page-dragon[data-selected="true"] .lair-page-dragon-box .lair-page-dragon-name,
-    #lair-edit-page .lair-page-dragon[data-selected="true"] .lair-page-dragon-box .lair-page-dragon-move{
+    #lair-edit-page .lair-page-dragon[data-selected="true"] .lair-page-dragon-box .lair-page-dragon-move {
         color: var(--success-text);
         border-color: rgb(var(--success));
     }
@@ -3283,7 +3706,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     }
     .lair-counter strong,
     #den-slot-unlock-list .den-slot-unlock-timestamp strong,
-    #dialog-dad, #dialog-mom,
+    #dialog-dad,
+    #dialog-mom,
     #nest_potentials_text,
     .nest_dragon_name,
     .nest-breed-parent-name {
@@ -3295,16 +3719,19 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #den-slot-unlock-list .den-slot-unlock-timestamp {
         color: var(--text);
     }
-    #den-slot-unlock .den-slot-unlock-name, #den-slot-unlock-list .den-slot-unlock-name {
+    #den-slot-unlock .den-slot-unlock-name,
+    #den-slot-unlock-list .den-slot-unlock-name {
         border: 2px solid var(--borders-light);
         outline: 2px solid var(--borders);
         background-color: var(--tooltip-bg);
         color: var(--strong);
     }
-    #den-slot-unlock .den-slot-unlock-item .den-slot-unlock-item-inventory, #den-slot-unlock-list .den-slot-unlock-item .den-slot-unlock-item-inventory {
+    #den-slot-unlock .den-slot-unlock-item .den-slot-unlock-item-inventory,
+    #den-slot-unlock-list .den-slot-unlock-item .den-slot-unlock-item-inventory {
         font-weight: bold;
     }
-    #purchase-tab-dialog .purchase-tab-dialog-cost, #unlock-slots-dialog .unlock-slots-dialog-cost,
+    #purchase-tab-dialog .purchase-tab-dialog-cost,
+    #unlock-slots-dialog .unlock-slots-dialog-cost,
     #den-slot-unlock #den-slot-unlock-remaining .den-slot-unlock-remaining-count {
         color: var(--accent-three)
     }
@@ -3319,11 +3746,13 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: var(--widget-light) !important;
         border: 2px dashed var(--borders-med) !important;
     }
-    #lair-edit-page .lair-page-dragon[data-selected="true"] .lair-page-dragon-select, #lair-edit-page .lair-page-dragon[data-selected="true"] .lair-page-dragon-select {
+    #lair-edit-page .lair-page-dragon[data-selected="true"] .lair-page-dragon-select,
+    #lair-edit-page .lair-page-dragon[data-selected="true"] .lair-page-dragon-select {
         background: url(https://i.postimg.cc/3wDDcwpJ/lairselected.png);
     }
-    
-    .lair-page-dragons .lair-page-dragon .lair-page-dragon-box, .dragoncard {
+
+    .lair-page-dragons .lair-page-dragon .lair-page-dragon-box,
+    .dragoncard {
         border: 2px solid var(--borders);
         background: linear-gradient(to top, var(--widget-light) 0%, var(--widget-med) 100%);
     }
@@ -3333,11 +3762,13 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     hr[style*="background-color:#AAA;"] {
         background-color: var(--divider) !important;
     }
-    .lair-page-dragons .lair-page-dragon .lair-page-dragon-box .lair-page-dragon-energy-bar-full, .dragon-card .dragon-card-box .dragon-card-energy-bar-full {
+    .lair-page-dragons .lair-page-dragon .lair-page-dragon-box .lair-page-dragon-energy-bar-full,
+    .dragon-card .dragon-card-box .dragon-card-energy-bar-full {
         background: linear-gradient(to right, var(--energy-one) 0%, var(--energy-two) 100%);
         border: 1px solid var(--energy-border);
     }
-    .lair-page-dragons .lair-page-dragon .lair-page-dragon-box .lair-page-dragon-energy-bar-full[style*="100%"], .dragon-card .dragon-card-box .dragon-card-energy-bar-full[style*="100%"] {
+    .lair-page-dragons .lair-page-dragon .lair-page-dragon-box .lair-page-dragon-energy-bar-full[style*="100%"],
+    .dragon-card .dragon-card-box .dragon-card-energy-bar-full[style*="100%"] {
         background: linear-gradient(to right, var(--energy-full-one) 0%, var(--energy-full-two) 100%);
         border: 1px solid var(--energy-full-border);
     }
@@ -3346,7 +3777,10 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: var(--tab);
         border-radius: 5px;
     }
-    .modal-tab-icon, .modal-tab-name, .modal-tab-count, .lair-feed-dialog-food-cost {
+    .modal-tab-icon,
+    .modal-tab-name,
+    .modal-tab-count,
+    .lair-feed-dialog-food-cost {
         color: var(--accent-three) !important;
     }
     .modal-tab:hover {
@@ -3372,7 +3806,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .lair-footer .lair-slots-available strong {
         color: var(--accent-three) !important;
     }
-    #den-slot-unlock .den-slot-unlock, #den-slot-unlock-list .den-slot-unlock {
+    #den-slot-unlock .den-slot-unlock,
+    #den-slot-unlock-list .den-slot-unlock {
         background: linear-gradient(to top, var(--section) 0%, var(--widget) 50%, var(--widget-med) 100%);
         color: var(--text);
         border: 2px solid var(--borders-light);
@@ -3383,13 +3818,15 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #den-slot-unlock .den-slot-unlock-reward em {
         color: var(--em);
     }
-    .unlock-slots-dialog-button-remaining, .unlock-slots-dialog-button-remaining strong {
+    .unlock-slots-dialog-button-remaining,
+    .unlock-slots-dialog-button-remaining strong {
         color: #000 !important;
     }
     #breed_mod span[style*="bold"] {
         color: var(--strong)
     }
-    img[src*="/images/nests/"], img[src*="/static/nests/"] {
+    img[src*="/images/nests/"],
+    img[src*="/static/nests/"] {
         filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.8));
     }
     img[src$="/layout/offspring_preview.jpg"] {
@@ -3402,14 +3839,15 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         color: var(--text) !important;
     }
     .nest-image-button {
-        background:none;
+        background: none;
     }
 }
-@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/dragon.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/trading\\/fantastic-familiars.*") {
+@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/dragon.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/trading\\/fantastic-familiars.*") {
     /* Familiar Bonding & Fantastic Familiars */
-    
     /*cottage bg on ff page*/
-    div.contentcontainer div.main[style*="/static/layout/fantastic-familiar/background.png"], div.contentcontainer div.main[style*="/static/layout/fantastic-familiar/background.png"] div.content {
+    div.contentcontainer div.main[style*="/static/layout/fantastic-familiar/background.png"],
+    div.contentcontainer div.main[style*="/static/layout/fantastic-familiar/background.png"] div.content {
         position: relative;
         z-index: 2;
     }
@@ -3456,8 +3894,9 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         left: 0;
         background-repeat: no-repeat;
     }
-    
-    #bonding-dialog-familiar, .bonding-dialog-familiar {
+
+    #bonding-dialog-familiar,
+    .bonding-dialog-familiar {
         background: var(--widget-med);
         border: none;
         border-radius: 3px;
@@ -3469,32 +3908,48 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .flattery-slot-name {
         color: var(--accent-two);
     }
-    #bonding-dialog-text strong, #bonding-dialog-text .bonding-dialog-call strong, .bonding-dialog-text strong, .bonding-dialog-text .bonding-dialog-instructions strong, .feat-claim-name, #bonding-dialog-text .bonding-dialog-rewards-text-fiona strong {
+    #bonding-dialog-text strong,
+    #bonding-dialog-text .bonding-dialog-call strong,
+    .bonding-dialog-text strong,
+    .bonding-dialog-text .bonding-dialog-instructions strong,
+    .feat-claim-name,
+    #bonding-dialog-text .bonding-dialog-rewards-text-fiona strong {
         color: var(--strong);
     }
     div#boon div div span {
         color: var(--strong) !important;
     }
-    .flattery-slot-bond-level-description, #bonding-dialog-text, #bonding-dialog-text .bonding-dialog-call, .bonding-dialog-text .bonding-dialog-instructions {
+    .flattery-slot-bond-level-description,
+    #bonding-dialog-text,
+    #bonding-dialog-text .bonding-dialog-call,
+    .bonding-dialog-text .bonding-dialog-instructions {
         color: var(--text);
     }
-    #bonding-dialog-treasure, .bonding-dialog-reward, .bonding-dialog-rewards-text-fiona, #bonding-dialog-text .bonding-dialog-rewards-text-fiona {
+    #bonding-dialog-treasure,
+    .bonding-dialog-reward,
+    .bonding-dialog-rewards-text-fiona,
+    #bonding-dialog-text .bonding-dialog-rewards-text-fiona {
         color: var(--em);
     }
-    div#ajax-bonding.ui-dialog-content.ui-widget-content, #bonding-dialog {
+    div#ajax-bonding.ui-dialog-content.ui-widget-content,
+    #bonding-dialog {
         margin-top: 10px;
         margin-right: 5px;
     }
-    .bonding-dialog-fiona, #bonding-dialog-fiona {
+    .bonding-dialog-fiona,
+    #bonding-dialog-fiona {
         background: linear-gradient(to bottom, var(--widget-med), var(--widget-light) 100%);
         color: var(--text);
         border: 2px solid var(--border);
     }
-    .flattery-meter-full.common-meter-full, .feat-requirement-meter-full.common-meter-full {
+    .flattery-meter-full.common-meter-full,
+    .feat-requirement-meter-full.common-meter-full {
         background: linear-gradient(to right, var(--energy-one) 0%, var(--energy-two) 100%);
         border: 1px solid var(--energy-border);
     }
-    .flattery-meter-frame[data-level="7"] .flattery-meter-full.common-meter-full, .feat-progress-bar-full.common-meter-full, [data-progress="100"] .feat-requirement-meter-full.common-meter-full {
+    .flattery-meter-frame[data-level="7"] .flattery-meter-full.common-meter-full,
+    .feat-progress-bar-full.common-meter-full,
+    [data-progress="100"] .feat-requirement-meter-full.common-meter-full {
         background: linear-gradient(to right, var(--energy-full-one) 0%, var(--energy-full-two) 100%);
         border-color: var(--energy-full-border);
     }
@@ -3511,10 +3966,12 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .feat-text-requirement[data-complete="1"] {
         color: rgb(var(--success));
     }
-    .feat-description, .feat-rewards-header em {
+    .feat-description,
+    .feat-rewards-header em {
         color: var(--text-med);
     }
-    .feat-description strong, .feat-timestamp strong {
+    .feat-description strong,
+    .feat-timestamp strong {
         color: var(--accent-four)
     }
     .feat {
@@ -3525,17 +3982,18 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: var(--widget-med);
         border-color: var(--borders-med);
     }
-    .feat-rewards-treasure, .feat-rewards-gems {
+    .feat-rewards-treasure,
+    .feat-rewards-gems {
         color: var(--accent-three);
     }
-    .feat-rewards, .feat-claim-currency {
+    .feat-rewards,
+    .feat-claim-currency {
         border: 2px solid var(--borders);
         background: var(--section);
     }
 }
 @-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/dressing.*") {
     /* Dressing Room */
-    
     .dr-dragon-mannequin-name {
         color: var(--strong)
     }
@@ -3560,7 +4018,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     ul.clothinglist li {
         color: var(--text)
     }
-    .dr-clothinglist-item span[style*="#b2a78c"], #skin-box span[style*="#b2a78c"] {
+    .dr-clothinglist-item span[style*="#b2a78c"],
+    #skin-box span[style*="#b2a78c"] {
         color: var(--em) !important
     }
     .emptyapparelslot {
@@ -3585,7 +4044,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         width: 100%;
         border-bottom: 1px solid var(--divider);
     }
-    .ah-sep-text, .ah-sep-button-container {
+    .ah-sep-text,
+    .ah-sep-button-container {
         color: var(--text);
         background-color: var(--main);
         font-weight: bold;
@@ -3597,13 +4057,15 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #add-apparel {
         padding: 0;
     }
-    #dr-apparel-selected, #dr-apparel-widget-header, #dr-apparel-widget-footer {
+    #dr-apparel-selected,
+    #dr-apparel-widget-header,
+    #dr-apparel-widget-footer {
         border-color: var(--divider)
     }
     .dr-apparel-widget-information {
         color: var(--warning-text);
         border: 1px solid rgb(var(--warning));
-        background-color: rgba(var(--warning),0.08);
+        background-color: rgba(var(--warning), 0.08);
         background-image: url("https://www1.flightrising.com/static/layout/message_icons/information.png");
         background-repeat: no-repeat;
         background-position: 15px center;
@@ -3619,7 +4081,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     div.fayt-search-item {
         background: var(--widget-med);
     }
-    #dr-apparel-search-results .fayt-search-item:hover, #dr-apparel-selected .fayt-search-item:hover {
+    #dr-apparel-search-results .fayt-search-item:hover,
+    #dr-apparel-selected .fayt-search-item:hover {
         background-color: var(--widget-light)
     }
 }
@@ -3698,7 +4161,6 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
 }
 @-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/dominance.*") {
     /* Dominance */
-    
     div.main {
         position: relative;
         z-index: 2;
@@ -3742,7 +4204,6 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
 }
 @-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/trading\\/baldwin.*") {
     /* Baldwin */
-    
     div.contentcontainer div.main {
         position: relative;
         z-index: 2;
@@ -3773,13 +4234,15 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         left: 0;
         background-repeat: no-repeat;
     }
-    #baldwin #baldwin-himself { 
+    #baldwin #baldwin-himself {
         filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.8));
     }
-    #baldwin #speech-bubble-content, .baldwin-create-speech-bubble {
+    #baldwin #speech-bubble-content,
+    .baldwin-create-speech-bubble {
         z-index: 2;
     }
-    #baldwin #speech-bubble-content::before, .baldwin-create-speech-bubble::before {
+    #baldwin #speech-bubble-content::before,
+    .baldwin-create-speech-bubble::before {
         content: '';
         position: absolute;
         display: block;
@@ -3792,7 +4255,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     }
     .baldwin-create-speech-bubble::before {
         height: 100%;
-        width:100%;
+        width: 100%;
         top: 0;
         left: 0;
     }
@@ -3834,13 +4297,15 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         color: var(--text);
         border-color: var(--borders);
     }
-    #baldwin-timer-value, .baldwin-timer-completed {
+    #baldwin-timer-value,
+    .baldwin-timer-completed {
         color: var(--accent-three)
     }
     .baldwin-timer-header {
         color: var(--text)
     }
-    #baldwin-xpbar-leftlabel, #baldwin-xpbar-rightlabel {
+    #baldwin-xpbar-leftlabel,
+    #baldwin-xpbar-rightlabel {
         color: var(--strong)
     }
     .recipe {
@@ -3849,11 +4314,12 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         border: 2px solid var(--borders-light);
     }
     #recipe-no-results {
-        background: rgba(var(--warning),0.1);
+        background: rgba(var(--warning), 0.1);
         border-color: rgb(var(--warning));
         color: var(--warning-text);
     }
-    .baldwin-xptext, .baldwin-xptext b {
+    .baldwin-xptext,
+    .baldwin-xptext b {
         color: rgb(var(--success))
     }
     .recipe-cost {
@@ -3864,7 +4330,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         width: 95%;
     }
     #baldwin #plus-button {
-        background: rgba(var(--success),0.1);
+        background: rgba(var(--success), 0.1);
         border-color: rgb(var(--success));
         border-radius: 5px;
     }
@@ -3896,7 +4362,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         width: 100%;
         border-bottom: 1px solid var(--divider);
     }
-    .baldwin-divider-text{
+    .baldwin-divider-text {
         color: var(--text);
         background-color: var(--main);
         font-weight: bold;
@@ -3907,16 +4373,16 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
 
 @-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/trading\\/trivia.*") {
     /* Tomo */
-    
     .tomo-question-frame {
         background: var(--section);
         border-color: var(--borders);
     }
-    #tomo-reward, #tomo-remaining {
+    #tomo-reward,
+    #tomo-remaining {
         color: var(--accent-four);
     }
     #tomo-remaining-count {
-	color: var(--accent-three);
+        color: var(--accent-three);
     }
     /* correct/incorrect labels for tomo answers */
     .tomo-answer {
@@ -3931,7 +4397,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .tomo-answer-neutral {
         color: var(--text-med);
     }
-    .tomo-next .beigebutton, #raffle-button {
+    .tomo-next .beigebutton,
+    #raffle-button {
         width: 100%;
         box-sizing: border-box;
     }
@@ -3974,7 +4441,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #gather_success_bg {
         left: 145px;
     }
-    
+
     #gather_success_bg img {
         filter: brightness(60%) contrast(180%);
         mix-blend-mode: overlay;
@@ -4002,9 +4469,9 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     }
 }
 
-@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/trading\\/crim.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/trading\\/pinkpile.*") {
+@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/trading\\/crim.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/trading\\/pinkpile.*") {
     /* Crim & Pinkerton */
-    
     /*shared bg*/
     div.contentcontainer div.main {
         position: relative;
@@ -4054,7 +4521,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         color: var(--accent-four) !important;
     }
     #crimswap .crim-item-details {
-        border-color: rgba(255,255,255,0.1);
+        border-color: rgba(255, 255, 255, 0.1);
     }
     #crim-text {
         border: 3px solid var(--borders-med) !important;
@@ -4109,7 +4576,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #swipp-timer .swipp-timer-header {
         color: var(--text)
     }
-    #swipp-timer-value, .swipp-timer-completed {
+    #swipp-timer-value,
+    .swipp-timer-completed {
         color: var(--accent-three)
     }
     .swipp-trade {
@@ -4170,12 +4638,12 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     }
 }
 
-@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/achievements.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/game-database.*") {
+@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/achievements.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/game-database.*") {
     /* Achievements */
-    
     .achievements-header {
         color: var(--text);
-text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 0px var(--shadow), -2px 1px 0px var(--shadow), -2px 2px 0px var(--shadow), -1px -2px 0px var(--shadow), -1px -1px 0px var(--shadow), -1px 0px 0px var(--shadow), -1px 1px 0px var(--shadow), -1px 2px 0px var(--shadow), 0px -2px 0px var(--shadow), 0px -1px 0px var(--shadow), 0px 0px 0px var(--shadow), 0px 1px 0px var(--shadow), 0px 2px 0px var(--shadow), 1px -2px 0px var(--shadow), 1px -1px 0px var(--shadow), 1px 0px 0px var(--shadow), 1px 1px 0px var(--shadow), 1px 2px 0px var(--shadow), 2px -2px 0px var(--shadow), 2px -1px 0px var(--shadow), 2px 0px 0px var(--shadow), 2px 1px 0px var(--shadow), 2px 2px 0px var(--shadow);
+        text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 0px var(--shadow), -2px 1px 0px var(--shadow), -2px 2px 0px var(--shadow), -1px -2px 0px var(--shadow), -1px -1px 0px var(--shadow), -1px 0px 0px var(--shadow), -1px 1px 0px var(--shadow), -1px 2px 0px var(--shadow), 0px -2px 0px var(--shadow), 0px -1px 0px var(--shadow), 0px 0px 0px var(--shadow), 0px 1px 0px var(--shadow), 0px 2px 0px var(--shadow), 1px -2px 0px var(--shadow), 1px -1px 0px var(--shadow), 1px 0px 0px var(--shadow), 1px 1px 0px var(--shadow), 1px 2px 0px var(--shadow), 2px -2px 0px var(--shadow), 2px -1px 0px var(--shadow), 2px 0px 0px var(--shadow), 2px 1px 0px var(--shadow), 2px 2px 0px var(--shadow);
     }
     .achievement-item {
         background: linear-gradient(to top, var(--section) 0%, var(--widget) 50%, var(--widget-med) 100%);
@@ -4187,10 +4655,11 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         min-height: 33px;
         height: auto;
     }
-    
-    .achievement-item[data-progress="100"], #achievements-recent-list .achievement-item {
+
+    .achievement-item[data-progress="100"],
+    #achievements-recent-list .achievement-item {
         border-color: rgb(var(--success));
-        background: linear-gradient(to bottom, var(--widget) 20%, var(--widget-med) 50%, rgba(var(--success),0.15) 100%);
+        background: linear-gradient(to bottom, var(--widget) 20%, var(--widget-med) 50%, rgba(var(--success), 0.15) 100%);
     }
     .achievement-item-rewards-box {
         background: var(--widget-med);
@@ -4206,7 +4675,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .pursuits-rewards-meter-action button {
         width: 100%;
     }
-    .meter-expiration, .pursuits-expiration {
+    .meter-expiration,
+    .pursuits-expiration {
         color: var(--text);
         margin-top: -12px;
     }
@@ -4223,7 +4693,9 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: var(--section);
         border-color: var(--borders);
     }
-    .pursuit-item-reward, .achievement-item-reward, .achievement-item-name {
+    .pursuit-item-reward,
+    .achievement-item-reward,
+    .achievement-item-name {
         color: var(--strong)
     }
     .achievement-item-requirement {
@@ -4245,7 +4717,9 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         color: var(--text);
         padding-bottom: 3px;
     }
-    .achievement-meter-bigtext.common-meter-text, .pursuit-meter-text, .achievement-meter-text.achievement-meter-text {
+    .achievement-meter-bigtext.common-meter-text,
+    .pursuit-meter-text,
+    .achievement-meter-text.achievement-meter-text {
         color: var(--text);
         text-shadow: -1px 0 0 var(--shadow), 1px 0 0 var(--shadow), -1px 1px 0 var(--shadow), 1px 1px 0 var(--shadow), -1px 2px 0 var(--shadow), 1px 2px 0 var(--shadow), -1px -1px 0 var(--shadow), 1px -1px 0 var(--shadow), 0 -1px 0 var(--shadow);
     }
@@ -4259,15 +4733,17 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .achievement-meter-text.achievement-meter-text {
         font-weight: bold;
     }
-    .achievement-meter-bigtext.common-meter-text strong, .achievement-meter-text.achievement-meter-text strong {
+    .achievement-meter-bigtext.common-meter-text strong,
+    .achievement-meter-text.achievement-meter-text strong {
         color: inherit;
     }
-    .pursuit-item-meter-full, .achievement-meter-full.common-meter-full {
+    .pursuit-item-meter-full,
+    .achievement-meter-full.common-meter-full {
         background: linear-gradient(to right, var(--energy-one) 0%, var(--energy-two) 100%);
         border: 1px solid var(--energy-border);
         box-sizing: border-box;
     }
-    
+
     /*pursuit rewards meter, rework later*/
     #pursuits-rewards-meter .pursuits-rewards-meter-segment[data-index="1"] .common-meter-full,
     #pursuits-rewards-meter .pursuits-rewards-meter-segment[data-index="2"] .common-meter-full,
@@ -4302,11 +4778,13 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #pursuits-rewards-meter .pursuits-rewards-meter-segment[data-index="4"] .common-meter-full[style*="100%"] {
         background: var(--energy-full-one);
     }
-    .pursuit-item-meter-full[style*="100%"], .achievement-meter-full.common-meter-full[style*="100%"] {
+    .pursuit-item-meter-full[style*="100%"],
+    .achievement-meter-full.common-meter-full[style*="100%"] {
         background: linear-gradient(to right, var(--energy-full-one) 0%, var(--energy-full-two) 100%);
         border: 1px solid var(--energy-full-border);
     }
-    .pursuit-item-meter-checkmark, #pursuits-rewards-meter .pursuits-meter-checkmark {
+    .pursuit-item-meter-checkmark,
+    #pursuits-rewards-meter .pursuits-meter-checkmark {
         filter: sepia(100%) hue-rotate(75deg) brightness(150%) saturate(250%);
     }
     img[src$="/static/layout/achievements/badge-complete.png"] {
@@ -4314,19 +4792,24 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     }
 }
 
-@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/scrying.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/nesting\\/.*") {
+@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/scrying.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/nesting\\/.*") {
     /* Scrying Workshop & Fixes for Nesting Grounds/Preview Offspring */
     #predict-morphology .scry-options select {
         padding: 0;
     }
-    #predict-morphology .scry-load, #predict-morphology .scry-manage-options {
-        background: rgba(var(--widget-rgb),0.85);
+    #predict-morphology .scry-load,
+    #predict-morphology .scry-manage-options {
+        background: rgba(var(--widget-rgb), 0.85);
         border-color: var(--borders)
     }
     .scry-options {
         color: #000;
     }
-    strong[style*="color"], span[style*="#731d08"], div[style*="#731d08"], a[style*="#731d08"] {
+    strong[style*="color"],
+    span[style*="#731d08"],
+    div[style*="#731d08"],
+    a[style*="#731d08"] {
         color: var(--strong) !important;
     }
     img[src$="/layout/offspring_preview.jpg"] {
@@ -4369,7 +4852,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: url('https://www1.flightrising.com/static/layout/scryer/bg_assaybloodlines.png') no-repeat;
         filter: var(--filter) hue-rotate(var(--hue)) brightness(50%);
     }
-    #assay-preview-1, #assay-preview-2 {
+    #assay-preview-1,
+    #assay-preview-2 {
         position: static;
         margin: 15px auto 0;
         display: block;
@@ -4378,7 +4862,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         order: 2;
         opacity: 0;
     }
-    #assay-preview-1[style], #assay-preview-2[style] {
+    #assay-preview-1[style],
+    #assay-preview-2[style] {
         opacity: 1;
     }
     #assay-container > div:nth-child(3) {
@@ -4392,10 +4877,12 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #assay-container #id10t-confirm {
         width: calc(20% - 15px);
     }
-    #assay-container #id10t1, #foresee-progeny-container #id10t1 {
+    #assay-container #id10t1,
+    #foresee-progeny-container #id10t1 {
         text-align: right;
     }
-    #assay-container #id10t1, #assay-container #id10t2 {
+    #assay-container #id10t1,
+    #assay-container #id10t2 {
         width: calc(40% - 15px);
         margin: 0 auto;
     }
@@ -4430,7 +4917,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         box-sizing: border-box;
         border-bottom: 1px solid var(--divider);
     }
-    #alert-list .individual-alert:nth-child(2n+1) {
+    #alert-list .individual-alert:nth-child(2n + 1) {
         background: var(--widget-med)
     }
     #alert-list .individual-alert > span {
@@ -4452,10 +4939,12 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #alert-list .individual-alert hr {
         display: none;
     }
-    #alert-list a[style*="color"], .common-red-text {
+    #alert-list a[style*="color"],
+    .common-red-text {
         color: var(--link) !important;
     }
-    #alert-list a[style*="color"]:hover, #alert-text a[style*="color"]:focus {
+    #alert-list a[style*="color"]:hover,
+    #alert-text a[style*="color"]:focus {
         color: var(--link-hover) !important;
     }
 }
@@ -4552,7 +5041,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         border: 1px solid var(--strong);
         color: var(--text);
     }
-    div.pendingtrade.youcontrib span.typetag, div.pendingtrade.theycontrib span.typetag {
+    div.pendingtrade.youcontrib span.typetag,
+    div.pendingtrade.theycontrib span.typetag {
         color: var(--text);
     }
     #nopendingtrades {
@@ -4575,7 +5065,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #confirm-trade span:first-child {
         color: var(--strong);
     }
-    form#trade, form#deliver {
+    form#trade,
+    form#deliver {
         max-width: 100%;
         box-sizing: border-box;
         padding-left: 20px;
@@ -4586,33 +5077,38 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .inner-content > #xroad-attach {
         padding-left: 10px;
     }
-    p#tradeawait, #divapprovetrade {
+    p#tradeawait,
+    #divapprovetrade {
         color: var(--warning-text);
         margin-top: 15px;
         margin-left: 0;
         width: calc(100% - 160px);
         box-sizing: border-box;
     }
-    #divapprovetrade p, p#tradeawait {
-        background: rgba(var(--warning),0.1);
+    #divapprovetrade p,
+    p#tradeawait {
+        background: rgba(var(--warning), 0.1);
         padding: 0.8em;
         color: var(--warning-text);
         box-sizing: border-box;
         border-radius: 5px;
         border: 1px solid rgb(var(--warning));
     }
-    #divcanceltrade:hover, #trade-chat img:hover, #divapprovetrade img:hover {
+    #divcanceltrade:hover,
+    #trade-chat img:hover,
+    #divapprovetrade img:hover {
         cursor: pointer;
     }
-    #trademsgs .msgstamp, #trademsglimits {
+    #trademsgs .msgstamp,
+    #trademsglimits {
         color: var(--text-med);
     }
     #tradedone {
-        margin-top:40px;
+        margin-top: 40px;
         padding: 1em !important;
         color: var(--success-text);
         border: 1px solid rgb(var(--success));
-        background-color: rgba(var(--success),0.08);
+        background-color: rgba(var(--success), 0.08);
         box-sizing: border-box;
         border-radius: 4px;
     }
@@ -4631,7 +5127,6 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
 
 @-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/auction-house.*") {
     /* Auction House */
-    
     div.contentcontainer div.main {
         position: relative;
         z-index: 2;
@@ -4666,28 +5161,42 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .ah-listing-clear-button {
         filter: var(--filter) hue-rotate(var(--hue));
     }
-    .ah-pagenumbers a, .ah-item-name {
+    .ah-pagenumbers a,
+    .ah-item-name {
         color: var(--link-hover);
     }
-    .ah-tab-list a, .ah-house-dropdown a, .ah-copy-link {
+    .ah-tab-list a,
+    .ah-house-dropdown a,
+    .ah-copy-link {
         color: var(--link);
     }
-    .ah-expired, .ah-search-error-header {
+    .ah-expired,
+    .ah-search-error-header {
         color: rgb(var(--error));
     }
-    .ah-listing-itemname, .ah-dlg-itemname, .ah-dlg-cost, #ah-sell-itemname {
+    .ah-listing-itemname,
+    .ah-dlg-itemname,
+    .ah-dlg-cost,
+    #ah-sell-itemname {
         color: var(--em)
     }
     .ah-current-tab {
         color: var(--strong)
     }
-    .ui-dialog .ui-dialog-content, #ah-search-collapsed-blurb,
-    .ah-search-submit-container-right, .ah-reset-to-defaults,
-    .dragon-search-filters-reset, .dragon-search-filters-keep-expanded,
-    div#friendchange.ui-dialog-content.ui-widget-content div span, .ah-search-error-tip {
+    .ui-dialog .ui-dialog-content,
+    #ah-search-collapsed-blurb,
+    .ah-search-submit-container-right,
+    .ah-reset-to-defaults,
+    .dragon-search-filters-reset,
+    .dragon-search-filters-keep-expanded,
+    div#friendchange.ui-dialog-content.ui-widget-content div span,
+    .ah-search-error-tip {
         color: var(--text);
     }
-    .ah-search-option select, span.dragon-search-multiselect select, span.dragon-search-color-range select, span.dragon-search-filter select {
+    .ah-search-option select,
+    span.dragon-search-multiselect select,
+    span.dragon-search-color-range select,
+    span.dragon-search-filter select {
         border-radius: 10px;
         padding: 2px;
     }
@@ -4703,7 +5212,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         width: 100%;
         border-bottom: 1px solid var(--divider);
     }
-    .ah-sep-text, .ah-sep-button-container {
+    .ah-sep-text,
+    .ah-sep-button-container {
         color: var(--text);
         background-color: var(--main);
         font-weight: bold;
@@ -4721,10 +5231,14 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: linear-gradient(to right, var(--energy-full-one) 0%, var(--energy-full-two) 100%);
         border: 1px solid var(--energy-full-border);
     }
-    #ah-sell-details, .ah-ledger-header, .ah-history-note, #dragon-search-filters {
+    #ah-sell-details,
+    .ah-ledger-header,
+    .ah-history-note,
+    #dragon-search-filters {
         background-color: var(--section);
     }
-    #ah-sell-details, .ah-sell-item-list {
+    #ah-sell-details,
+    .ah-sell-item-list {
         border: 2px solid var(--borders);
         background: var(--widget-med);
     }
@@ -4757,9 +5271,12 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .ah-search-submit-container hr {
         width: 100%
     }
-    .ah-search-submit-container #ah-search-submit, .ah-search-submit-container-left, .ah-search-submit-container-right {
+    .ah-search-submit-container #ah-search-submit,
+    .ah-search-submit-container-left,
+    .ah-search-submit-container-right {
         position: static;
-        width: 33%; box-sizing: border-box;
+        width: 33%;
+        box-sizing: border-box;
     }
     .ah-search-submit-container-right {
         padding: 0 0 10px 10px;
@@ -4769,14 +5286,20 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .ah-search-submit-container .ah-reset-to-defaults {
         margin-left: 10px;
     }
-    .ah-listing-buy-button, .ah-listing-relist-button, .ah-listing-clear-button, .ah-listing-cancel-button, .ah-listing-decline-button {
+    .ah-listing-buy-button,
+    .ah-listing-relist-button,
+    .ah-listing-clear-button,
+    .ah-listing-cancel-button,
+    .ah-listing-decline-button {
         border-radius: 11px;
         outline: 2px solid var(--borders);
     }
-    .ah-listing-cancel-button, .ah-listing-decline-button {
+    .ah-listing-cancel-button,
+    .ah-listing-decline-button {
         background-image: none;
     }
-    .ah-listing-cancel-button::before, .ah-listing-decline-button::before {
+    .ah-listing-cancel-button::before,
+    .ah-listing-decline-button::before {
         content: '';
         position: relative;
         display: block;
@@ -4794,14 +5317,21 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: url('https://www1.flightrising.com/static/layout/auctionhouse/button_ah_decline.png') no-repeat;
     }
     /*~~*/
-    input#paypal_submit1, input#paypal_submit2, input#paypal_submit3, input#paypal_submit4, input#paypal_submit5 {
+    input#paypal_submit1,
+    input#paypal_submit2,
+    input#paypal_submit3,
+    input#paypal_submit4,
+    input#paypal_submit5 {
         background: none !important;
         padding: 0px !important;
     }
     div.main div.content div.inner-content div#region-info fieldset {
         background-image: none !important;
     }
-    #region-info fieldset h1, #subregions h1, .region_text div:first-child, #region-title span {
+    #region-info fieldset h1,
+    #subregions h1,
+    .region_text div:first-child,
+    #region-title span {
         color: var(--strong) !important;
     }
     .region_element {
@@ -4816,18 +5346,21 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background-color: var(--tooltip-bg);
         border: 2px solid var(--borders);
     }
-    .ah-listing-row, .ah-sell-dragon-row {
+    .ah-listing-row,
+    .ah-sell-dragon-row {
         border: 1px solid var(--borders-med);
         background: var(--widget);
     }
-    .ah-listing-row:not([style*="display: none"]) ~ .ah-listing-row, .ah-sell-dragon-row + .ah-sell-dragon-spacer + .ah-sell-dragon-row {
+    .ah-listing-row:not([style*="display: none"]) ~ .ah-listing-row,
+    .ah-sell-dragon-row + .ah-sell-dragon-spacer + .ah-sell-dragon-row {
         border-top: none;
         border-radius: 0;
     }
     .ah-sell-dragon-spacer {
         display: none;
     }
-    .ah-listing-row:nth-child(2n+1), .ah-sell-dragon-row:nth-child(4n+1) {
+    .ah-listing-row:nth-child(2n + 1),
+    .ah-sell-dragon-row:nth-child(4n + 1) {
         background: var(--widget-med)
     }
     .ah-listing-right {
@@ -4845,15 +5378,21 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #ah-buy-ok-dlg p span.ah-dlg-dragonid {
         color: var(--accent-three);
     }
-    #ah-topright-buy-button, #ah-topright-sell-button, #ah-topright-activity-button {
+    #ah-topright-buy-button,
+    #ah-topright-sell-button,
+    #ah-topright-activity-button {
         background: none;
         position: relative;
     }
-    #ah-topright-buy-button::before, #ah-topright-sell-button::before, #ah-topright-activity-button::before {
+    #ah-topright-buy-button::before,
+    #ah-topright-sell-button::before,
+    #ah-topright-activity-button::before {
         content: '';
         position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         filter: var(--filter) hue-rotate(var(--hue)) brightness(80%) contrast(150%);
     }
     #ah-topright-buy-button::before {
@@ -4882,7 +5421,11 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .ah-gene-select-results table.common-table tbody tr:nth-child(even) {
         background-color: var(--widget);
     }
-    .ah-gene-select-results .common-table td, .ah-gene-select-results .common-table th, .ah-gene-select-results .common-table strong, .ah-gene-select-results .common-table tbody tr.ah-gene-select-result.ah-gene-selected td, .common-table tbody tr.ah-gene-select-result.ah-gene-selected strong {
+    .ah-gene-select-results .common-table td,
+    .ah-gene-select-results .common-table th,
+    .ah-gene-select-results .common-table strong,
+    .ah-gene-select-results .common-table tbody tr.ah-gene-select-result.ah-gene-selected td,
+    .common-table tbody tr.ah-gene-select-result.ah-gene-selected strong {
         color: var(--text) !important;
     }
     .ah-gene-select-results {
@@ -4897,7 +5440,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         border-color: var(--borders);
         background: var(--widget-light)
     }
-    .common-table tbody tr.ah-gene-select-result.ah-gene-selected:nth-child(2n+1) {
+    .common-table tbody tr.ah-gene-select-result.ah-gene-selected:nth-child(2n + 1) {
         background: var(--borders-light)
     }
     .ah-listing-sold-checkmark {
@@ -4908,12 +5451,16 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: linear-gradient(to right, var(--energy-one) 0%, var(--energy-two) 100%);
         border: 1px solid var(--energy-border);
     }
-    .dragon-profile-energy-meter-full[style*="100%"], .dragon-profile-familiar-meter-frame[data-level="7"] .dragon-profile-familiar-meter-full {
+    .dragon-profile-energy-meter-full[style*="100%"],
+    .dragon-profile-familiar-meter-frame[data-level="7"] .dragon-profile-familiar-meter-full {
         background: linear-gradient(to right, var(--energy-full-one) 0%, var(--energy-full-two) 100%);
         border: 1px solid var(--energy-full-border);
     }
 }
-@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/hoard.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/vault.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/game-database.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/search.*") {
+@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/hoard.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/vault.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/game-database.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/search.*") {
     /* Hoard & Vault & GameDB & Search */
     .common-bulletin-text {
         background: var(--columns);
@@ -4929,7 +5476,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         filter: var(--filter) hue-rotate(var(--hue));
     }
     /* dark drop down color for hoard/vault */
-    .hoard-result-item-controls select, .settings-hub-select-control select {
+    .hoard-result-item-controls select,
+    .settings-hub-select-control select {
         background-color: var(--columns);
         color: var(--text);
         border: 1px solid var(--borders);
@@ -4954,7 +5502,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         border: 2px solid var(--energy-border);
     }
     /* less bright favorite items */
-    .hoard-result-item-box[data-favorite="1"], .game-database-item-result[data-favorite="true"] {
+    .hoard-result-item-box[data-favorite="1"],
+    .game-database-item-result[data-favorite="true"] {
         background: linear-gradient(to bottom, var(--energy-full-one) 0%, var(--energy-full-two) 100%);
         border-color: var(--energy-full-border);
     }
@@ -5001,7 +5550,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: var(--tooltip-bg);
         border-color: var(--borders)
     }
-    .game-database-item-name, #game-database .common-plain-table th {
+    .game-database-item-name,
+    #game-database .common-plain-table th {
         color: var(--em);
     }
     .game-database-header {
@@ -5010,7 +5560,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: var(--tooltip-header);
         padding: 5px;
     }
-    
+
     .hoard-stack-functions-name {
         color: var(--strong);
         text-shadow: 0 1px 1px var(--shadow);
@@ -5027,7 +5577,9 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         color: var(--button-text);
         text-shadow: -1px 0 0 var(--shadow), 1px 0 0 var(--shadow), -1px 1px 0 var(--shadow), 1px 1px 0 var(--shadow), -1px 2px 0 var(--shadow), 1px 2px 0 var(--shadow), -1px -1px 0 var(--shadow), 1px -1px 0 var(--shadow), 0 -1px 0 var(--shadow);
     }
-    .hoard-stack-functions-quantity, .dragon-picker-preview-number, .game-database-no-result {
+    .hoard-stack-functions-quantity,
+    .dragon-picker-preview-number,
+    .game-database-no-result {
         color: var(--text-med);
     }
     .hoard-stack-functions {
@@ -5035,7 +5587,11 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         border: 3px solid var(--borders);
         box-shadow: 0px 0px 10px 0px var(--shadow);
     }
-    .user-hoard-dialog-items, .user-hoard-food-points, .dragon-picker-preview-name, .hoard-sale-buyback-item-name, .hoard-sale-buyback-item-price {
+    .user-hoard-dialog-items,
+    .user-hoard-food-points,
+    .dragon-picker-preview-name,
+    .hoard-sale-buyback-item-name,
+    .hoard-sale-buyback-item-price {
         color: var(--strong);
     }
     .settings-hub-checkbox-description span[style*="#808080"] {
@@ -5050,7 +5606,9 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .common-table tr {
         border-bottom: none;
     }
-    .game-database-item-result-name, #dragon-search-filters-blurb, .game-database-monster-result-name {
+    .game-database-item-result-name,
+    #dragon-search-filters-blurb,
+    .game-database-monster-result-name {
         color: var(--text);
     }
     .game-database-item-result[data-favorite="true"] .game-database-item-result-name {
@@ -5074,11 +5632,13 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: var(--section);
         border-color: var(--borders);
     }
-    #game-database-report-instructions a, #game-database-suggestion-instructions a, #game-database-comment-instructions a {
+    #game-database-report-instructions a,
+    #game-database-suggestion-instructions a,
+    #game-database-comment-instructions a {
         color: rgb(var(--warning))
     }
     .user-hoard-dialog-item-frame-error {
-        background: linear-gradient(to bottom, rgba(var(--error),0.5) 0%, rgba(var(--error),0.2) 100%);
+        background: linear-gradient(to bottom, rgba(var(--error), 0.5) 0%, rgba(var(--error), 0.2) 100%);
     }
     /*nts: not sure where these appear now?*/
     .dragon-picker-preview-bubble {
@@ -5136,7 +5696,6 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
 }
 @-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/game-database.*") {
     /* Game DB */
-    
     /*z-index fixes*/
     div.contentcontainer div.main {
         position: relative;
@@ -5182,10 +5741,12 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #game-database-search-results .game-database-search-result .game-database-search-result-link:hover {
         background: var(--widget-med)
     }
-    game-database-search-result-name, .game-database-search-result-name > strong {
+    game-database-search-result-name,
+    .game-database-search-result-name > strong {
         color: inherit !important
     }
-    .game-database-search-loading, #game-database-search-results .game-database-search-no-results {
+    .game-database-search-loading,
+    #game-database-search-results .game-database-search-no-results {
         color: var(--text) !important
     }
     .game-database-achievement-result-description {
@@ -5204,7 +5765,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: var(--widget);
         border-color: var(--divider);
     }
-    #game-database-achievement-results .game-database-achievement-result:nth-child(2n+1) {
+    #game-database-achievement-results .game-database-achievement-result:nth-child(2n + 1) {
         background: var(--widget-med)
     }
     #game-database-achievement-results .game-database-achievement-result:hover {
@@ -5231,7 +5792,10 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     }
 }
 
-@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/site\\/dev-tracker.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/forums.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/search\\/forums.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/msgs.*") {
+@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/site\\/dev-tracker.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/forums.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/search\\/forums.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/msgs.*") {
     /* Forums & PMs */
     :root {
         --admin-text: #ffa3a3;
@@ -5239,31 +5803,37 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         --admin-em: #dfc1a4;
         --admin-link: #ffed80;
         --admin-link-hover: #fffad9;
-        --widget-med-alt: rgba(var(--widget-rgb),0.35);
+        --widget-med-alt: rgba(var(--widget-rgb), 0.35);
     }
-    
+
     /*fix dev tracker*/
-    #dev-tracker-content .dev-tracker-search-result-timestamp, .pinglist-widget-code, .pinglist-ping-code {
+    #dev-tracker-content .dev-tracker-search-result-timestamp,
+    .pinglist-widget-code,
+    .pinglist-ping-code {
         color: var(--text-med)
     }
-    #dev-tracker-content .dev-tracker-search-option-label, #dev-tracker-content .dev-tracker-search-option-label  {
+    #dev-tracker-content .dev-tracker-search-option-label,
+    #dev-tracker-content .dev-tracker-search-option-label {
         color: var(--text);
     }
     #dev-tracker-content .dev-tracker-search-result-message-fade {
         font-weight: bold;
         text-transform: uppercase;
         color: var(--accent-five);
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,var(--section) 80%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--section) 80%);
     }
-    
+
     /*subforum list*/
-    #forum-fr td > a:first-child img, #forum-general td > a:first-child img {
+    #forum-fr td > a:first-child img,
+    #forum-general td > a:first-child img {
         opacity: 0;
     }
-    #forum-fr td > a:first-child, #forum-general td > a:first-child {
+    #forum-fr td > a:first-child,
+    #forum-general td > a:first-child {
         position: relative;
     }
-    #forum-fr td > a:first-child::before, #forum-general td > a:first-child::before {
+    #forum-fr td > a:first-child::before,
+    #forum-general td > a:first-child::before {
         content: '';
         display: block;
         box-sizing: border-box;
@@ -5275,15 +5845,17 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         position: absolute;
         left: -30px;
         top: calc(50% - 5px);
-        background: linear-gradient(to bottom, var(--energy-one) 0%,var(--energy-two) 80%);
+        background: linear-gradient(to bottom, var(--energy-one) 0%, var(--energy-two) 80%);
         box-shadow: 0 0 2px var(--shadow)
     }
-    #forum-fr td:hover > a:first-child::before, #forum-fr td:focus-within > a:first-child::before,
-    #forum-general td:hover > a:first-child::before, #forum-general td:focus-within > a:first-child::before{
-        background: linear-gradient(to bottom, var(--energy-full-one) 0%,var(--energy-full-two) 80%);
+    #forum-fr td:hover > a:first-child::before,
+    #forum-fr td:focus-within > a:first-child::before,
+    #forum-general td:hover > a:first-child::before,
+    #forum-general td:focus-within > a:first-child::before {
+        background: linear-gradient(to bottom, var(--energy-full-one) 0%, var(--energy-full-two) 80%);
         border-color: var(--energy-full-border)
     }
-    
+
     /*forums*/
     .forumname {
         color: var(--link)
@@ -5291,15 +5863,24 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .forumlink {
         color: var(--text)
     }
-    .post-text[data-style="0"] .post-text-content, .post-text[data-style="0"] .post-text-content span,
-    .post-text[data-style="0"] .post-text-content b, .post-text[data-style="0"] .post-text-content i, .post-text[data-style="0"] .post-text-content u, .post-text[data-style="0"] .post-text-content strike, .post-text[data-style="0"] .post-text-content span, .post-text[data-style="0"] .post-text-content td, .post-text[data-style="0"] .post-text-content sub, .post-text[data-style="0"] .post-text-content sup {
+    .post-text[data-style="0"] .post-text-content,
+    .post-text[data-style="0"] .post-text-content span,
+    .post-text[data-style="0"] .post-text-content b,
+    .post-text[data-style="0"] .post-text-content i,
+    .post-text[data-style="0"] .post-text-content u,
+    .post-text[data-style="0"] .post-text-content strike,
+    .post-text[data-style="0"] .post-text-content span,
+    .post-text[data-style="0"] .post-text-content td,
+    .post-text[data-style="0"] .post-text-content sub,
+    .post-text[data-style="0"] .post-text-content sup {
         color: var(--text) !important;
     }
     .post-text[data-style="0"] span.bbcode_spoiler {
         color: var(--section) !important;
         background: var(--section) !important;
     }
-    .bbcode_spoiler, .post-text[data-style="0"] span.bbcode_spoiler {
+    .bbcode_spoiler,
+    .post-text[data-style="0"] span.bbcode_spoiler {
         color: var(--section);
         background: var(--section);
     }
@@ -5309,48 +5890,67 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .post-text[data-style="0"] span.bbcode_spoiler:hover {
         color: var(--accent-two) !important;
     }
-    .post-text-content span[style*="font-family"], .post-text-signature span[style*="font-family"] {
+    .post-text-content span[style*="font-family"],
+    .post-text-signature span[style*="font-family"] {
         font-family: var(--font-family) !important;
     }
-    .post-admin .post-text-content, .post-admin .post-text-content li, .post-admin .post-text-content li span, .search-result-body.adminpost {
+    .post-admin .post-text-content,
+    .post-admin .post-text-content li,
+    .post-admin .post-text-content li span,
+    .search-result-body.adminpost {
         color: var(--admin-text) !important;
     }
-    .post-admin .post-text-content a, .post-admin .post-text-content a > *, .post-admin .post-text-content ul li::marker {
+    .post-admin .post-text-content a,
+    .post-admin .post-text-content a > *,
+    .post-admin .post-text-content ul li::marker {
         color: var(--admin-link) !important;
     }
-    .post-admin .post-text-content a:hover, .post-admin .post-text-content a:focus, .post-admin .post-text-content a:hover > *, .post-admin .post-text-content a:focus > * {
+    .post-admin .post-text-content a:hover,
+    .post-admin .post-text-content a:focus,
+    .post-admin .post-text-content a:hover > *,
+    .post-admin .post-text-content a:focus > * {
         color: var(--admin-link-hover) !important;
     }
-    .post-admin .post-text-content b, .post-admin .post-text-content strong {
+    .post-admin .post-text-content b,
+    .post-admin .post-text-content strong {
         color: var(--admin-strong)
     }
-    .post-admin .post-text-content i, .post-admin .post-text-content em {
+    .post-admin .post-text-content i,
+    .post-admin .post-text-content em {
         color: var(--admin-em)
     }
-    .common-message-forum.common-message-info, .common-message-forum.common-message-info b, .common-message-forum.common-message-info i {
+    .common-message-forum.common-message-info,
+    .common-message-forum.common-message-info b,
+    .common-message-forum.common-message-info i {
         color: var(--warning-text);
     }
-    .common-message-forum.common-message-error, .common-message-forum.common-message-error b, .common-message-forum.common-message-error i {
+    .common-message-forum.common-message-error,
+    .common-message-forum.common-message-error b,
+    .common-message-forum.common-message-error i {
         color: var(--error-text);
     }
-    .common-message-forum.common-message-success, .common-message-forum.common-message-success b, .common-message-forum.common-message-success i {
+    .common-message-forum.common-message-success,
+    .common-message-forum.common-message-success b,
+    .common-message-forum.common-message-success i {
         color: var(--success-text);
     }
     .post-header {
-        border-bottom: 1px solid rgba(0,0,0,0.2);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         margin: 0px;
         padding-left: 10px;
         padding-right: 10px;
         background-color: var(--section);
         border-radius: 0px 10px 0px 10px;
     }
-    div.post-author-avatar, .vista-option-avatar {
+    div.post-author-avatar,
+    .vista-option-avatar {
         background: var(--widget);
         border: 2px solid var(--borders-med);
         outline: 2px solid var(--borders);
         border-radius: 10px;
     }
-    div.post-author-avatar:hover, .vista-option-avatar:hover {
+    div.post-author-avatar:hover,
+    .vista-option-avatar:hover {
         background: var(--widget);
         border: 2px solid var(--borders-light);
         border-radius: 10px;
@@ -5358,7 +5958,9 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     div.post-author-avatar img {
         border-radius: 10px !important;
     }
-    .editor-author-avatar, div#commentlist div span a img, div#avatars span#currentnav img {
+    .editor-author-avatar,
+    div#commentlist div span a img,
+    div#avatars span#currentnav img {
         background: var(--widget);
         border: 2px solid var(--borders);
         border-color: var(--widget);
@@ -5367,13 +5969,15 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     post-author-action.post-author-action-friend.common-tooltip {
         background: var(--tooltip-bg) !important;
     }
-    .editor-topic input, .editor-topic input:hover, .editor-topic input:focus {
+    .editor-topic input,
+    .editor-topic input:hover,
+    .editor-topic input:focus {
         background-color: var(--section);
         border-radius: 5px;
         padding: .5em;
     }
     .post-text-signature {
-        border-top: 1px solid rgba(0,0,0,0.2) !important;
+        border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
     }
     .post-timestamp {
         color: var(--text-med);
@@ -5400,7 +6004,9 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .main[style*="/404/"] span[style*="731d08"] {
         color: var(--strong) !important;
     }
-    .post-edited em, .search-results-description-subtext, .pinglist-no-results {
+    .post-edited em,
+    .search-results-description-subtext,
+    .pinglist-no-results {
         color: var(--text-med);
     }
     span.posttext .forummsg {
@@ -5424,7 +6030,9 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     div.post-author:not([style*="background-image"]) {
         background: linear-gradient(to bottom, var(--section) 0%, var(--widget) 50%);
     }
-    a.post-author-username, .post-author-username, .editor-author-username {
+    a.post-author-username,
+    .post-author-username,
+    .editor-author-username {
         color: var(--text);
         font-size: 1.1em;
         display: inline-block !important;
@@ -5438,7 +6046,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         color: var(--text);
         font-weight: bold;
         text-shadow: var(--stroke);
-        padding-top:3px;
+        padding-top: 3px;
         font-size: 0.8em;
     }
     #forum-content div#postsheader {
@@ -5483,7 +6091,13 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         border: solid 1px var(--borders) !important;
         padding: 5px !important;
     }
-    .news, table#forum-fr td, table#forum-general td, h1.forum-header, table#postlist td.lastpost, table#postlist td.activity div.activity-replies, table#postlist td.topic {
+    .news,
+    table#forum-fr td,
+    table#forum-general td,
+    h1.forum-header,
+    table#postlist td.lastpost,
+    table#postlist td.activity div.activity-replies,
+    table#postlist td.topic {
         color: var(--text);
     }
     table#postlist tr.darker {
@@ -5498,8 +6112,10 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .search-result-body {
         color: var(--text);
     }
-    .search-result-bubble.search-result-bubble-alt, .search-result-bubble,
-    .search-triangle-blocker, .search-result-bubble-alt .search-triangle-blocker {
+    .search-result-bubble.search-result-bubble-alt,
+    .search-result-bubble,
+    .search-triangle-blocker,
+    .search-result-bubble-alt .search-triangle-blocker {
         background-color: var(--section);
         fill: var(--section);
     }
@@ -5518,16 +6134,22 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .search-result a {
         color: var(--link);
     }
-    #msg-show span#msg-avatar div a img, div#preview-header a img, div.editor-author-avatar img {
+    #msg-show span#msg-avatar div a img,
+    div#preview-header a img,
+    div.editor-author-avatar img {
         background: var(--widget);
         border: 2px solid var(--borders-med);
         outline: 2px solid var(--borders);
         border-radius: 10px;
     }
-    .search-controls-label, #attach-confirm-currency span, div div#dset.ui-dialog-content.ui-widget-content span, p#tradeawait {
+    .search-controls-label,
+    #attach-confirm-currency span,
+    div div#dset.ui-dialog-content.ui-widget-content span,
+    p#tradeawait {
         color: var(--text);
     }
-    .search-results-description, div#super-container div form div span div {
+    .search-results-description,
+    div#super-container div form div span div {
         color: var(--accent-two);
     }
     form#changedragon fieldset div#window {
@@ -5538,13 +6160,14 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         border: 2px solid var(--borders);
         box-shadow: none;
     }
-    #forum-content div#lockmsg, #banmsg, #lockmsg {
-        background: rgba(var(--warning),0.1);
+    #forum-content div#lockmsg,
+    #banmsg,
+    #lockmsg {
+        background: rgba(var(--warning), 0.1);
         border: 1px solid rgb(var(--warning));
         color: var(--warning-text);
     }
     /*[[forum-color-text]]*/
-    
     div#postsheader span {
         position: static;
     }
@@ -5552,7 +6175,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         margin-right: auto;
         padding-left: 12px;
     }
-    table#postlist tr.lighter, table#postlist tr.darker {
+    table#postlist tr.lighter,
+    table#postlist tr.darker {
         border-radius: 0;
         border: 1px solid var(--borders);
         border-bottom: 0;
@@ -5562,7 +6186,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     }
     table#postlist tbody tr:last-child {
         border-radius: 0 0 7px 7px !important;
-        border-collapse: separate; 
+        border-collapse: separate;
         border-bottom: 1px solid var(--borders);
     }
     table#postlist tr {
@@ -5575,11 +6199,11 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         transition: color 0.3s;
     }
     table#forum-fr td,
-    table#forum-general td{
+    table#forum-general td {
         position: relative;
     }
     table#forum-fr td img,
-    table#forum-general td img{
+    table#forum-general td img {
         margin-bottom: 10px;
     }
     table#postlist tr .topic > a:hover,
@@ -5601,7 +6225,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #forum-content #topic-header strong {
         text-shadow: 0 0 0.2em var(--shadow), 0 0 0.2em var(--shadow), 0 0 0.2em var(--shadow);
     }
-    #topic-search, #forum-search {
+    #topic-search,
+    #forum-search {
         width: auto;
         margin-left: auto;
     }
@@ -5663,14 +6288,16 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         margin-left: 15px;
     }
     table#forum-fr td span,
-    table#forum-general td span{
+    table#forum-general td span {
         color: var(--text-med);
         line-height: 1.8em;
     }
-    #postlist .blocked-by-user, #postlist .blocking-user, .blocked-post .post-text-content {
+    #postlist .blocked-by-user,
+    #postlist .blocking-user,
+    .blocked-post .post-text-content {
         color: rgb(var(--warning)) !important;
     }
-    
+
     /*pinglists*/
     .pinglist-header {
         border-color: var(--borders);
@@ -5680,26 +6307,30 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         display: grid;
         grid-template-columns: repeat(auto-fill, 40px);
     }
-    
+
     /*~~~~~~~~~~~~~~~~~~~~*/
-    
     /*messaging*/
     .main[style*="/static/layout/pm/internal_bg.jpg"] {
         background: url('https://www1.flightrising.com/static/layout/mb/internal_bg.png') no-repeat !important;
     }
-    #table-header, #msg-header, #form-header, #msg-preview #header {
+    #table-header,
+    #msg-header,
+    #form-header,
+    #msg-preview #header {
         border-bottom: 1px solid var(--borders);
         background-color: var(--section);
         border: 1px solid var(--borders);
         color: var(--accent-four)
     }
-    #msg-show, #msg-preview #body {
-        background-color: var(--widget-med); 
+    #msg-show,
+    #msg-preview #body {
+        background-color: var(--widget-med);
     }
     #msg-header + #msg-show {
         border-top: none;
     }
-    #msg-header > span:first-child, #form-header {
+    #msg-header > span:first-child,
+    #form-header {
         font-weight: bold;
     }
     #msg-editor {
@@ -5760,10 +6391,10 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     td.delcheck,
     #table-header span:last-child {
         min-width: 75px;
-         text-align: center;
+        text-align: center;
     }
     #ajaxbody tr.highlight-tr {
-        background-color:  var(--widget);
+        background-color: var(--widget);
     }
     #ajaxbody a.forumlink {
         font-weight: bold;
@@ -5774,7 +6405,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    #ajaxbody a.forumlink:hover, #sender-name:hover {
+    #ajaxbody a.forumlink:hover,
+    #sender-name:hover {
         color: var(--link-hover);
     }
     #msg-show span:first-child div {
@@ -5827,7 +6459,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #msg-preview #body span:first-child {
         margin-top: 0;
         padding-top: 15px;
-        box-sizing:border-box;
+        box-sizing: border-box;
     }
     #msg-preview #body #preview-header {
         width: 100%;
@@ -5858,7 +6490,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         padding: 10px 5px;
     }
 }
-@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/main\\.php\\?p=battle.*"), regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/coliseum.*") {
+@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/main\\.php\\?p=battle.*"),
+regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/coliseum.*") {
     /* Coliseum */
     #internal_bg {
         display: none;
@@ -5894,7 +6527,6 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     }
     /**/
     /* Coliseum */
-    
     div#coli-dragonlist {
         background-color: var(--widget-med);
         border-radius: 10px;
@@ -5906,7 +6538,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         border: 2px solid var(--borders-med);
         outline: 1px solid var(--borders);
     }
-    div#coli-stats-panel, #coli-stats-panel-bg {
+    div#coli-stats-panel,
+    #coli-stats-panel-bg {
         background-color: var(--widget-med) !important;
     }
     .coli-stats-stone {
@@ -5916,22 +6549,39 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     div#infoFrame img {
         border-radius: 10px !important;
     }
-    .coli-dragonlist-name, .coli-stats-name, #coli-equip-dragon-info-name, .coli-equip-statdlg-stathdr {
+    .coli-dragonlist-name,
+    .coli-stats-name,
+    #coli-equip-dragon-info-name,
+    .coli-equip-statdlg-stathdr {
         color: var(--strong)
     }
-    #coli-equip-inventory-blurb, .coli-equip-statdlg-statval {
+    #coli-equip-inventory-blurb,
+    .coli-equip-statdlg-statval {
         color: var(--text)
     }
     .coli-equip-statdlg-statinc {
         color: var(--em)
     }
-    .coli-stats-health-breath-table th, .coli-stats-health-breath-table td, .coli-stats-points-table th, .coli-stats-points-table td, #coli-equip-stats-table th, #coli-equip-stats-table td {
+    .coli-stats-health-breath-table th,
+    .coli-stats-health-breath-table td,
+    .coli-stats-points-table th,
+    .coli-stats-points-table td,
+    #coli-equip-stats-table th,
+    #coli-equip-stats-table td {
         color: var(--text) !important;
     }
     .coli-dragonlist-row.coli-dragon-in-party {
         background-color: var(--widget-light) !important;
     }
-    #coli-tipcontainer, .coli-equip-battlestone-disabled-msg, .coli-equip-stat-tooltip, .coli-equip-tooltip-style, #coli-organize-load-party-tip, .coli-tooltip-style, #coli_condition_tooltip, #coli-equip-errordlg, div#coli-equip-tincdlg-pad {
+    #coli-tipcontainer,
+    .coli-equip-battlestone-disabled-msg,
+    .coli-equip-stat-tooltip,
+    .coli-equip-tooltip-style,
+    #coli-organize-load-party-tip,
+    .coli-tooltip-style,
+    #coli_condition_tooltip,
+    #coli-equip-errordlg,
+    div#coli-equip-tincdlg-pad {
         color: var(--text) !important;
         background: var(--tooltip-bg) !important;
         border: 0px solid var(--borders) !important;
@@ -5976,7 +6626,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         height: 100%;
         display: block;
         filter: invert(100) var(--filter) hue-rotate(var(--hue));
-        z-index:-1;
+        z-index: -1;
     }
     #organizeMain::before {
         background: url('https://flightrising.com/content/battle/images/organize/spr_organize_back_notip_04.png');
@@ -6008,14 +6658,15 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #camp-window::before {
         content: '';
         height: 100%;
-        width:100%;
+        width: 100%;
         display: block;
         position: relative;
         z-index: -1;
         background: url('https://flightrising.com/content/battle/images/camp/window_captcha.png');
         filter: invert(100%) var(--filter) hue-rotate(var(--hue)) saturate(120%);
     }
-    #pl_content.fullscreen, #pl_fullscreenContainer.fullscreen {
+    #pl_content.fullscreen,
+    #pl_fullscreenContainer.fullscreen {
         background: var(--main) !important;
     }
     #coli-equip-statdlg-count {
@@ -6025,7 +6676,6 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
 }
 @-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/trading\\/archaeology.*") {
     /* Archaeology */
-    
     div.main {
         position: relative;
         z-index: 2;
@@ -6065,14 +6715,13 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         left: 0;
         background-repeat: no-repeat;
     }
-    
+
     div.content {
         background: none !important;
     }
     #archaeology-xp-meter-label,
     #archaeology-xp-meter-amount,
-    .archaeology-dig-site-index-row-focus-toggle-text
-    {
+    .archaeology-dig-site-index-row-focus-toggle-text {
         color: var(--strong);
     }
     .archaeology-dig-site-index-row-description {
@@ -6082,11 +6731,13 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .archaeology-supply {
         color: var(--text);
     }
-    #archaeology-dig-timer-time, #archaeology-dig-timer-text, .archaeology-dig-plot-complete span {
+    #archaeology-dig-timer-time,
+    #archaeology-dig-timer-text,
+    .archaeology-dig-plot-complete span {
         color: var(--accent-three);
     }
     .archaeology-dig-plot-complete {
-        background: rgba(var(--widget-rgb),0.9);
+        background: rgba(var(--widget-rgb), 0.9);
         border-color: var(--borders);
         color: var(--text);
     }
@@ -6121,7 +6772,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         --flash-border: #b36f27;
     }
     /*bg*/
-     div.contentcontainer div.main[style*="/market/internal_bg.jpg"]::before {
+    div.contentcontainer div.main[style*="/market/internal_bg.jpg"]::before {
         content: '';
         position: absolute;
         height: 100%;
@@ -6133,7 +6784,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         left: 0;
         background-repeat: no-repeat;
         opacity: 0.15;
-         background-position: 330px -245px;
+        background-position: 330px -245px;
     }
     div.contentcontainer div.main[style*="/market/internal_bg.jpg"]::after {
         display: none;
@@ -6141,14 +6792,16 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .flash_sale_tab_icon img {
         filter: drop-shadow(1px 1px 3px rgba(255, 174, 125, .569)) drop-shadow(-1px -1px 3px rgba(255, 186, 54, .459));
     }
-    .market-item-result-name, .market-item-result-name-hot {
+    .market-item-result-name,
+    .market-item-result-name-hot {
         top: 13px;
         color: var(--strong);
     }
     .market-flash-result .market-item-result-name {
         color: var(--flash-item);
     }
-    #small-hot-boxes-container .market-item-result-hot, .market-item-result:not(.market-flash-result) {
+    #small-hot-boxes-container .market-item-result-hot,
+    .market-item-result:not(.market-flash-result) {
         background: linear-gradient(to top, var(--section) 0%, var(--widget) 50%, var(--widget-med) 100%);
         border: 2px solid var(--borders-light);
     }
@@ -6156,7 +6809,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         border: none;
     }
     .market-item-result.market-flash-result {
-        background:  linear-gradient(to bottom, #43211b 0%, #563926 50%, #695124 100%);
+        background: linear-gradient(to bottom, #43211b 0%, #563926 50%, #695124 100%);
         border: 2px solid var(--flash-border);
         position: relative;
     }
@@ -6172,7 +6825,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         filter: invert(100%) hue-rotate(180deg);
         border-radius: 8px;
     }
-    .market-item-price-container, .gem-pricing-container {
+    .market-item-price-container,
+    .gem-pricing-container {
         background: var(--widget-light);
         color: var(--text);
         border-color: var(--borders);
@@ -6181,14 +6835,14 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background: var(--flash-border);
         color: var(--flash-price);
     }
-    .treasure-price, .gem-price {
-        background: rgba(0,0,0,0.3);
+    .treasure-price,
+    .gem-price {
+        background: rgba(0, 0, 0, 0.3);
         border-color: var(--borders);
     }
-    
 }
 @-moz-document url-prefix("https://www1.flightrising.com/exchange") {
-    
+
     /* Grand Exchange */
     :root {
         --gems: 138, 195, 237;
@@ -6235,7 +6889,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         transform: translateZ(-1px);
     }
     
-    /*gloss*//*
+    /*gloss*/
+    /*
     div.contentcontainer div.main[style*="url(/static/cms/custom-shop/backgrounds/custom-shop-background-64d6ec1fe93f6.png)"] .content::after {
         background-image: url('https://www1.flightrising.com/static/cms/scene/39684.png') !important;
         filter: var(--filter) hue-rotate(var(--hue)) brightness(110%) contrast(150%);
@@ -6246,7 +6901,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         --shop-bg: url(/static/cms/custom-shop/backgrounds/custom-shop-background-64d6ec1fe93f6.png);
     }
     
-    /*susie*//*
+    /*susie*/
+    /*
     div.contentcontainer div.main[style*="url(/static/cms/custom-shop/backgrounds/custom-shop-background-63f21b07f1413.png)"]::after {
         background-image: url('https://www1.flightrising.com/static/cms/scene/43382.png') !important;
         filter: var(--filter) hue-rotate(var(--hue)) brightness(110%) contrast(150%);
@@ -6263,7 +6919,6 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         background-position: bottom left;
         background-size: 145%;
     }*/
-    
     /*grand exchange intro*/
     .common-message.custom-shops-common-message {
         background-color: var(--section);
@@ -6277,7 +6932,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .common-message.custom-shops-common-message div:last-of-type {
         margin-top: 0;
     }
-    
+
     /*divider headers*/
     .custom-shops-divider-text {
         background-color: var(--main);
@@ -6287,7 +6942,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .custom-shops-divider {
         border-color: var(--divider);
     }
-    
+
     /*add bg to shop currency for easy reading*/
     #custom-shop-currency {
         color: var(--strong);
@@ -6297,13 +6952,14 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         padding: 3px 10px 3px 5px;
         border-radius: 5px;
     }
-    .dialog-button-tray > a.beigebutton.thingbutton, .dialog-button-tray > input {
+    .dialog-button-tray > a.beigebutton.thingbutton,
+    .dialog-button-tray > input {
         display: inline-flex;
         flex-grow: 1;
         width: 45%;
         box-sizing: border-box;
     }
-    
+
     /*dark item bgs*/
     .custom-shop-trade {
         background: linear-gradient(to top, var(--section) 0%, var(--widget) 50%, var(--widget-med) 100%);
@@ -6365,18 +7021,18 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     /*treasure box*/
     .custom-shop-trade-currency-treasure {
         color: var(--warning-text);
-        background-color: rgba(var(--warning),0.2);
+        background-color: rgba(var(--warning), 0.2);
         border-color: rgb(var(--warning));
     }
     .custom-shop-trade-currency-gems {
         color: rgb(var(--gems-text));
-        background-color: rgba(var(--gems),0.2);
+        background-color: rgba(var(--gems), 0.2);
         border-color: rgb(var(--gems));
     }
     /*ap box*/
     .custom-shop-trade-currency-achievement-tokens {
         color: var(--error-text);
-        background-color: rgba(var(--error),0.15);
+        background-color: rgba(var(--error), 0.15);
         border-color: rgb(var(--error));
     }
 }
@@ -6395,7 +7051,11 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     #sitewide-effort-page > table td {
         color: var(--text) !important;
     }
-    .sitewide-effort-turn-in strong, #sitewide-effort-current-milestone-title, .sitewide-effort-milestone-contribution strong, #sitewide-effort-current-milestone-status, .sitewide-effort-npc-dialog-name {
+    .sitewide-effort-turn-in strong,
+    #sitewide-effort-current-milestone-title,
+    .sitewide-effort-milestone-contribution strong,
+    #sitewide-effort-current-milestone-status,
+    .sitewide-effort-npc-dialog-name {
         color: var(--accent-three);
     }
     #sitewide-effort-current-milestone-title {
@@ -6425,13 +7085,15 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         width: 100%;
         height: 100%;
         position: absolute;
-        top: 0;left:0;
+        top: 0;
+        left: 0;
     }
     .sitewide-effort-navigation-item.sitewide-effort-navigation-item-current::after {
         background-image: url("https://www1.flightrising.com/static/layout/effort/archive-milestone-active.png");
     }
 }
-@-moz-document regexp("(http|https):\\/\\/(|www1\\.|www\\.)flightrising\\.com\\/wiki\\/skins\\/.*"), regexp("(http|https):\\/\\/(|www1\\.|www\\.)flightrising\\.com\\/skins.*") {
+@-moz-document regexp("(http|https):\\/\\/(|www1\\.|www\\.)flightrising\\.com\\/wiki\\/skins\\/.*"),
+regexp("(http|https):\\/\\/(|www1\\.|www\\.)flightrising\\.com\\/skins.*") {
     /* Skins */
     /*set bg*/
     div.contentcontainer .main {
@@ -6476,7 +7138,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .skin-system-status-meter-item-active {
         background-color: rgb(var(--success))
     }
-    .skin-system-status-meter-item-active:not(:has(~ .skin-system-status-meter-item-active)){
+    .skin-system-status-meter-item-active:not(:has( ~ .skin-system-status-meter-item-active)) {
         background-color: rgb(var(--warning))
     }
     .skin-system-upload input {
@@ -6496,7 +7158,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         border-color: var(--borders);
     }
     #skin-system-open-tooltip .itemname {
-        background: linear-gradient(to right, var(--tooltip-bg) 0%,var(--tooltip-header) 100%)
+        background: linear-gradient(to right, var(--tooltip-bg) 0%, var(--tooltip-header) 100%)
     }
     #skin-system-currency-preview {
         background-color: var(--widget-light);
@@ -6508,7 +7170,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .skin-system-order[data-status="completed"] {
         color: var(--success-text);
         border-color: rgb(var(--success));
-        background-color: rgba(var(--success),0.08);
+        background-color: rgba(var(--success), 0.08);
     }
     .skin-system-styled-list li.skin-system-styled-list-item[data-result="pass"] a,
     .skin-system-order[data-status="completed"] strong,
@@ -6525,15 +7187,15 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     }
     /*fail*/
     .skin-system-styled-list li[data-result="fail"][data-pop="1"],
-    .skin-system-order[data-status="needs_revision"]{
+    .skin-system-order[data-status="needs_revision"] {
         color: var(--error-text);
-        background-color: rgba(var(--error),0.15);
+        background-color: rgba(var(--error), 0.15);
         border-color: rgb(var(--error));
     }
     .skin-system-styled-list li.skin-system-styled-list-item[data-result="fail"] a,
     .skin-system-order[data-status="needs_revision"] strong,
     .skin-system-order[data-status="needs_revision"] .skin-system-order-name,
-    .skin-system-order[data-status="needs_revision"] a:not(.skin-system-order-action)  {
+    .skin-system-order[data-status="needs_revision"] a:not(.skin-system-order-action) {
         color: rgb(var(--error));
     }
     .skin-system-styled-list li.skin-system-styled-list-item[data-result="fail"] a:hover,
@@ -6550,7 +7212,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .skin-system-order[data-status="in_progress"] {
         color: var(--warning-text);
         border-color: rgb(var(--warning));
-        background-color: rgba(var(--warning),0.08);
+        background-color: rgba(var(--warning), 0.08);
     }
     .skin-system-styled-list li.skin-system-styled-list-item[data-result="warning"] a,
     .skin-system-message-buy-blueprints a,
@@ -6571,22 +7233,25 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .skin-system-order[data-status="in_queue"] a:not(.skin-system-order-action):hover,
     .skin-system-order[data-status="in_progress"] a:not(.skin-system-order-action):hover,
     .skin-system-order[data-status="in_queue"] a:not(.skin-system-order-action):hover *,
-    .skin-system-order[data-status="in_progress"] a:not(.skin-system-order-action):hover *  {
+    .skin-system-order[data-status="in_progress"] a:not(.skin-system-order-action):hover * {
         color: var(--warning-text) !important;
     }
     /*misc color resetting*/
-    .skin-system-warning-details, .skin-system-pass-details, .skin-system-fail-details,
-    .skin-system-styled-list-item strong, .skin-system-styled-list-item em,
+    .skin-system-warning-details,
+    .skin-system-pass-details,
+    .skin-system-fail-details,
+    .skin-system-styled-list-item strong,
+    .skin-system-styled-list-item em,
     .skin-system-hoard-item-owned {
         color: inherit
     }
-    span[style*="#76240f"], .skin-system-hoard-item-owned strong {
+    span[style*="#76240f"],
+    .skin-system-hoard-item-owned strong {
         color: rgb(var(--success)) !important;
     }
     .skin-system-hoard-item[data-valid="0"] {
         background: var(--widget);
-        color: var(--text)
-        filter: none
+        color: var(--text) filter: none
     }
     .skin-system-hoard-item[data-valid="0"] img {
         filter: saturate(0%)
@@ -6594,7 +7259,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .skin-system-orders-footer {
         color: var(--text-med)
     }
-    
+
     /*LEGACY and/or applies to wiki*/
     a[style*="#731d08"] {
         color: var(--link) !important;
@@ -6605,28 +7270,33 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     div[style*="#731d08"] {
         color: var(--accent-five) !important;
     }
-    div[style*="#731d08"], #buybp-container h2 {
-text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 0px var(--shadow), -2px 1px 0px var(--shadow), -2px 2px 0px var(--shadow), -1px -2px 0px var(--shadow), -1px -1px 0px var(--shadow), -1px 0px 0px var(--shadow), -1px 1px 0px var(--shadow), -1px 2px 0px var(--shadow), 0px -2px 0px var(--shadow), 0px -1px 0px var(--shadow), 0px 0px 0px var(--shadow), 0px 1px 0px var(--shadow), 0px 2px 0px var(--shadow), 1px -2px 0px var(--shadow), 1px -1px 0px var(--shadow), 1px 0px 0px var(--shadow), 1px 1px 0px var(--shadow), 1px 2px 0px var(--shadow), 2px -2px 0px var(--shadow), 2px -1px 0px var(--shadow), 2px 0px 0px var(--shadow), 2px 1px 0px var(--shadow), 2px 2px 0px var(--shadow);
+    div[style*="#731d08"],
+    #buybp-container h2 {
+        text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 0px var(--shadow), -2px 1px 0px var(--shadow), -2px 2px 0px var(--shadow), -1px -2px 0px var(--shadow), -1px -1px 0px var(--shadow), -1px 0px 0px var(--shadow), -1px 1px 0px var(--shadow), -1px 2px 0px var(--shadow), 0px -2px 0px var(--shadow), 0px -1px 0px var(--shadow), 0px 0px 0px var(--shadow), 0px 1px 0px var(--shadow), 0px 2px 0px var(--shadow), 1px -2px 0px var(--shadow), 1px -1px 0px var(--shadow), 1px 0px 0px var(--shadow), 1px 1px 0px var(--shadow), 1px 2px 0px var(--shadow), 2px -2px 0px var(--shadow), 2px -1px 0px var(--shadow), 2px 0px 0px var(--shadow), 2px 1px 0px var(--shadow), 2px 2px 0px var(--shadow);
     }
     .submitcontrol {
         border: 2px solid var(--borders-med);
         outline: 2px solid var(--borders);
         background: linear-gradient(to top, var(--widget-light) 0%, var(--widget-med) 100%);
     }
-    .submitcontrol #blueprintlist, .submitcontrol #insert_item, .submitcontrol .infocontainer {
+    .submitcontrol #blueprintlist,
+    .submitcontrol #insert_item,
+    .submitcontrol .infocontainer {
         background: var(--widget);
         border-color: var(--borders);
         border-radius: 4px;
     }
-    .submitcontrol h1, .skininfo {
+    .submitcontrol h1,
+    .skininfo {
         color: var(--strong)
     }
-    .submitcontrol label select[disabled]{
-        background-color:var(--section);
+    .submitcontrol label select[disabled] {
+        background-color: var(--section);
         color: var(--text-med);
     }
-    #skinname-preview-skin[data-warning="true"], #skinname-preview-accent[data-warning="true"] {
-        color:rgb(var(--error))
+    #skinname-preview-skin[data-warning="true"],
+    #skinname-preview-accent[data-warning="true"] {
+        color: rgb(var(--error))
     }
     .mb_button {
         border-color: var(--borders)
@@ -6645,11 +7315,11 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     /* Dark World Map */
     #world-map-frame {
         border-radius: 12px;
-        overflow:hidden;
+        overflow: hidden;
     }
     #world-map-frame .world-map-poi {
         background: var(--section);
-        border-color: var(--borders); 
+        border-color: var(--borders);
     }
     #world-map-frame #world-map-share-poi {
         background: var(--section)
@@ -6658,7 +7328,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         color: var(--strong) !important;
         border-color: var(--borders-light) !important;
     }
-    #world-map-frame .world-map-poi-subtitle, #world-map-frame .world-map-poi-population {
+    #world-map-frame .world-map-poi-subtitle,
+    #world-map-frame .world-map-poi-population {
         color: var(--accent-three) !important;
     }
     #world-map-frame .world-map-poi-description {
@@ -6669,7 +7340,6 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
 
 @-moz-document regexp("(http|https):\\/\\/(|www1\\.|www\\.)flightrising\\.com\\/play\\/.*") {
     /*Fairgrounds*/
-    
     #higher-lower-card-description {
         z-index: 2;
     }
@@ -6700,7 +7370,10 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     }
 }
 
-@-moz-document regexp("(http|https):\\/\\/(|www1\\.|www\\.)flightrising\\.com\\/clan-home.*"), regexp("(http|https):\\/\\/(|www1\\.|www\\.)flightrising\\.com\\/shop-home.*"), regexp("(http|https):\\/\\/(|www1\\.|www\\.)flightrising\\.com\\/play-home.*"), regexp("(http|https):\\/\\/(|www1\\.|www\\.)flightrising\\.com\\/wiki\\/wiki-home.*") {
+@-moz-document regexp("(http|https):\\/\\/(|www1\\.|www\\.)flightrising\\.com\\/clan-home.*"),
+regexp("(http|https):\\/\\/(|www1\\.|www\\.)flightrising\\.com\\/shop-home.*"),
+regexp("(http|https):\\/\\/(|www1\\.|www\\.)flightrising\\.com\\/play-home.*"),
+regexp("(http|https):\\/\\/(|www1\\.|www\\.)flightrising\\.com\\/wiki\\/wiki-home.*") {
     /* Category Hubs */
     .menu_content a {
         display: inline-block;
@@ -6717,7 +7390,7 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
         height: 55px;
         color: var(--text);
         background: var(--main);
-        box-sizing:border-box;
+        box-sizing: border-box;
         padding: 0.2em 2em 0.5em 2em;
         opacity: 0;
         font-weight: bold;
@@ -6803,10 +7476,15 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
 
 @-moz-document domain("flightrising.com") {
     /* Image Replacement */
-    img[src*="/static/layout"]::selection { background: transparent; }
-    img[src*="/static/layout"]::-moz-selection { background: transparent; }
-    
-    #login-signup-container, #big-login-form-button,
+    img[src*="/static/layout"]::selection {
+        background: transparent;
+    }
+    img[src*="/static/layout"]::-moz-selection {
+        background: transparent;
+    }
+
+    #login-signup-container,
+    #big-login-form-button,
     #coli-organize-save-party,
     #coli-organize-load-party,
     img[src$="/static/layout/hoard/buttons/stack-function-apply-to-nest.png"],
@@ -6828,17 +7506,22 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     img[src$="/static/layout/hoard/buttons/stack-function-vault.png"],
     img[src$="/static/layout/hoard/buttons/stack-function-hoard.png"],
     img[src$="/static/layout/hoard/locked-disabled.png"],
-    img[src$="/images/layout/loading.gif"], img[src$="/static/layout/loading.gif"],
+    img[src$="/images/layout/loading.gif"],
+    img[src$="/static/layout/loading.gif"],
     img[src$="/static/layout/hoard/buttons/stack-function-locked.png"],
     img[src$="/static/layout/hoard/buttons/stack-function-preview-item.png"],
     img[src$="/static/layout/hoard/stored-gems.png"],
     img[src$="/static/layout/hoard/stored-treasure.png"],
     img[src$="/static/layout/lair/buttons/edit.png"],
     img[src$="/static/layout/lair/buttons/feed.png"],
-    img[src$="/static/layout/revamp/left_clan_small.png"], img[src$="/images/layout/revamp/left_clan_small.png"],
-    img[src$="/static/layout/revamp/left_shop_small.png"], img[src$="/images/layout/revamp/left_shop_small.png"],
-    img[src$="/static/layout/revamp/left_play_small.png"], img[src$="/images/layout/revamp/left_play_small.png"],
-    img[src$="/static/layout/revamp/left_library_small.png"], img[src$="/images/layout/revamp/left_library_small.png"],
+    img[src$="/static/layout/revamp/left_clan_small.png"],
+    img[src$="/images/layout/revamp/left_clan_small.png"],
+    img[src$="/static/layout/revamp/left_shop_small.png"],
+    img[src$="/images/layout/revamp/left_shop_small.png"],
+    img[src$="/static/layout/revamp/left_play_small.png"],
+    img[src$="/images/layout/revamp/left_play_small.png"],
+    img[src$="/static/layout/revamp/left_library_small.png"],
+    img[src$="/images/layout/revamp/left_library_small.png"],
     img[src$="/static/layout/fantastic-familiar/bonding-heart.png"],
     img[src$="/static/layout/game-database/button-items.png"],
     img[src$="/static/layout/game-database/button-monsters.png"],
@@ -6869,18 +7552,25 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     img[src$="/static/layout/archaeology/button-dig-sites.png"],
     img[src$="/static/layout/archaeology/button-muster-resources.png"],
     img[src$="/static/layout/archaeology/button-assist-a-friend.png"],
-    img[src$="/static/layout/archaeology/button-share-with-colleagues.png"], 
+    img[src$="/static/layout/archaeology/button-share-with-colleagues.png"],
     img[src$="/static/layout/archaeology/button-donate-to-the-guild.png"],
     #archaeology-dig-site-header-left > div > img,
     .archaeology-dig-plot img[src*="/static/layout/archaeology/button-precise-work.png"],
-    img[src$="/static/layout/lair/buttons/pagination-next.png"], img[src$="/images/layout/pagination/pagination-next.png"], img[src$="/static/layout/pagination/pagination-next.png"],
-    img[src$="/static/layout/lair/buttons/pagination-previous.png"], img[src$="/images/layout/pagination/pagination-previous.png"], img[src$="/static/layout/pagination/pagination-previous.png"],
-    img[src$="/static/layout/bestiary/buttons/filter.png"], img[src$="/static/layout/lair/buttons/filter.png"],
+    img[src$="/static/layout/lair/buttons/pagination-next.png"],
+    img[src$="/images/layout/pagination/pagination-next.png"],
+    img[src$="/static/layout/pagination/pagination-next.png"],
+    img[src$="/static/layout/lair/buttons/pagination-previous.png"],
+    img[src$="/images/layout/pagination/pagination-previous.png"],
+    img[src$="/static/layout/pagination/pagination-previous.png"],
+    img[src$="/static/layout/bestiary/buttons/filter.png"],
+    img[src$="/static/layout/lair/buttons/filter.png"],
     img[src$="/static/layout/button_canceltradesmall.png"],
     img[src$="/static/layout/button_senddelivery.png"],
     img[src$="/static/layout/button_requesttrade.png"],
-    .ah-listing-buy-button, img[src$="/static/layout/auctionhouse/button_ah_buy.png"],
-    img[src$="static/layout/slick/slick-arrow-left.png"], img[src$="static/layout/slick/slick-arrow-right.png"],
+    .ah-listing-buy-button,
+    img[src$="/static/layout/auctionhouse/button_ah_buy.png"],
+    img[src$="static/layout/slick/slick-arrow-left.png"],
+    img[src$="static/layout/slick/slick-arrow-right.png"],
     img[src$="/static/layout/scryer/button_load_scry.png"],
     img[src$="/static/layout/swipp/button-catalog.png"],
     img[src$="/static/layout/swipp/button_swipptrade.png"],
@@ -6892,11 +7582,16 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     img[src$="/static/layout/forum/forum-button-pinglists.png"],
     img[src$="/static/layout/forum/forum-button-search.png"],
     img[src$="/static/layout/fullscreen.png"],
-    #coli-equip-rearrange-btn, #coli-equip-prev-dragon-btn, #coli-equip-next-dragon-btn,
-    #coli-equip-statdlg-tincture-btn.coli-equip-disabled, #coli-equip-lock-btn, #coli-equip-clear-btn,
+    #coli-equip-rearrange-btn,
+    #coli-equip-prev-dragon-btn,
+    #coli-equip-next-dragon-btn,
+    #coli-equip-statdlg-tincture-btn.coli-equip-disabled,
+    #coli-equip-lock-btn,
+    #coli-equip-clear-btn,
     #dragon-profile-likes[data-active="false"] .dragon-profile-likes-icon,
     img[src$="/static/layout/game-database/icon-magnifying-glass.png"],
-    #action-pick-tab-icon::after, img[src$="/static/layout/lair/buttons/move-to-lair.png"],
+    #action-pick-tab-icon::after,
+    img[src$="/static/layout/lair/buttons/move-to-lair.png"],
     img[src$="/static/layout/lair/buttons/move-to-den.png"],
     img[src$="/static/layout/lair/buttons/move-to-tab.png"],
     img[src$="/static/layout/lair/buttons/add-slots.png"],
@@ -6917,8 +7612,10 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     img[src$="/static/layout/fantastic-familiar/feat-catalog-button.png"],
     img[src$="/static/layout/profile/button-buy.png"],
     img[src$="/static/layout/pagination/pagination-check.png"],
-    img[src$="/static/layout/lair/buttons/pagination-next.png"], img[src$="/static/layout/lair/buttons/pagination-previous.png"],
-    img[src$="/static/layout/icon_help.png"], img[src$="/static/layout/button_back.png"],
+    img[src$="/static/layout/lair/buttons/pagination-next.png"],
+    img[src$="/static/layout/lair/buttons/pagination-previous.png"],
+    img[src$="/static/layout/icon_help.png"],
+    img[src$="/static/layout/button_back.png"],
     img[src$="/static/layout/dressingroom/button_loadoutfit.png"],
     img[src$="/static/layout/dressingroom/button_saveoutfit.png"],
     img[src$="/static/layout/dressingroom/button_viewoutfit.png"],
@@ -6933,24 +7630,31 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     img[src$="/static/layout/game-database/button-suggest.png"],
     img[src$="/static/layout/game-database/button-share.png"],
     img[src$="/static/icons/tidy-up.png"],
-    img[src$="/static/layout/button_approvetrade.png"], img[src$="/static/layout/button_canceltrade.png"],
-    img[src$="/static/layout/forum/forum-icon-link.png"]
-    {
+    img[src$="/static/layout/button_approvetrade.png"],
+    img[src$="/static/layout/button_canceltrade.png"],
+    img[src$="/static/layout/forum/forum-icon-link.png"] {
         filter: var(--filter) hue-rotate(var(--hue)) brightness(80%) contrast(150%);
     }
-    
-    img[src$="/static/layout/arrow_right.png"], img[src$="/images/layout/arrow_right.png"],
-    img[src$="/static/layout/arrow_left.png"], img[src$="/images/layout/arrow_left.png"],
-    img[src$="/static/layout/admin_post_first.png"], img[src$="/static/layout/admin_post_last.png"],
-    img[src$="/static/layout/admin_post_previous.png"], img[src$="/static/layout/admin_post_next.png"],
-    #coli-organize-up, #coli-organize-down, #coli-equip-inventory-up-image, #coli-equip-inventory-down-image,
+
+    img[src$="/static/layout/arrow_right.png"],
+    img[src$="/images/layout/arrow_right.png"],
+    img[src$="/static/layout/arrow_left.png"],
+    img[src$="/images/layout/arrow_left.png"],
+    img[src$="/static/layout/admin_post_first.png"],
+    img[src$="/static/layout/admin_post_last.png"],
+    img[src$="/static/layout/admin_post_previous.png"],
+    img[src$="/static/layout/admin_post_next.png"],
+    #coli-organize-up,
+    #coli-organize-down,
+    #coli-equip-inventory-up-image,
+    #coli-equip-inventory-down-image,
     img[src$="/static/layout/bestiary/buttons/show-description.png"],
     img[src$="/static/layout/bestiary/buttons/hide-description.png"] {
         filter: var(--filter) hue-rotate(var(--hue)) brightness(140%) contrast(180%);
     }
     img[src$="/static/layout/hoard/buttons/stack-function-unlocked.png"],
     img[src$="/static/layout/hoard/buttons/button-select-all.png"],
-    img[src$="/static/layout/hoard/buttons/button-deselect-all.png"]{
+    img[src$="/static/layout/hoard/buttons/button-deselect-all.png"] {
         filter: var(--filter) hue-rotate(var(--hue)) brightness(70%) contrast(250%);
     }
     img[src$="/static/layout/game-database/button-favorite-off.png"] {
@@ -6967,19 +7671,24 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     img[src$="/static/layout/market/buttons/mode-treasure.png"],
     img[src$="/static/layout/market/buttons/mode-gem.png"],
     img[src$="/static/layout/hoard/buttons/button-add-funds.png"],
-    img[src$="/static/layout/hoard/buttons/button-remove-funds.png"]
-    {
+    img[src$="/static/layout/hoard/buttons/button-remove-funds.png"] {
         filter: var(--filter) hue-rotate(var(--hue)) brightness(75%) contrast(165%);
     }
     img[src$="/static/layout/hoard/locked-enabled.png"],
-    img[src$="/static/layout/hoard/unlocked-enabled.png"],
+    img[src$="/static/layout/hoard/unlocked-enabled.png"] {
+        filter: var(--filter) hue-rotate(1);
+    }
     span.ui-icon.ui-icon-closethick,
-    img[src$="/static/layout/x.gif"], img[src$="/images/layout/x.gif"], img[src$="/static/layout/auctionhouse/bigx.png"],
+    img[src$="/static/layout/x.gif"],
+    img[src$="/images/layout/x.gif"],
+    img[src$="/static/layout/auctionhouse/bigx.png"],
     img[src$="/content/battle/images/organize/bigx.png"],
     img[src$="/static/layout/auctionhouse/button_close.png"],
-    img[src$="/static/icons/eye_open.png"], img[src$="/static/icons/eye_close.png"],
-    li[data-visible="true"] .dr-apparel-visibility, li[data-visible="false"] .dr-apparel-visibility,
-    img[src$="/static/layout/icon_lock.png"]   {
+    img[src$="/static/icons/eye_open.png"],
+    img[src$="/static/icons/eye_close.png"],
+    li[data-visible="true"] .dr-apparel-visibility,
+    li[data-visible="false"] .dr-apparel-visibility,
+    img[src$="/static/layout/icon_lock.png"] {
         filter: var(--filter) hue-rotate(var(--hue)) brightness(180%) contrast(120%) saturate(400%);
     }
     img[src$="/static/layout/icon_star.png"],
@@ -7008,8 +7717,10 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     img[src$="/static/layout/lair/buttons/pagination-previous-disabled.png"],
     img[src$="/static/layout/lair/buttons/den-slot-unlock-disabled.png"],
     img[src$="/static/layout/lair/buttons/move-to-den-disabled.png"],
-    img[src$="/static/layout/pagination/pagination-previous-disabled.png"], img[src$="/images/layout/pagination/pagination-previous-disabled.png"],
-    img[src$="/static/layout/pagination/pagination-next-disabled.png"], img[src$="/images/layout/pagination/pagination-next-disabled.png"],
+    img[src$="/static/layout/pagination/pagination-previous-disabled.png"],
+    img[src$="/images/layout/pagination/pagination-previous-disabled.png"],
+    img[src$="/static/layout/pagination/pagination-next-disabled.png"],
+    img[src$="/images/layout/pagination/pagination-next-disabled.png"],
     img[src$="/static/layout/fantastic-familiar/bonding-heart-disabled.png"],
     img[src$="/static/layout/profile/button-scenic-mode-disabled.png"],
     img[src$="/static/layout/profile/button-sell-disabled.png"],
@@ -7020,7 +7731,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     img[src$="/static/layout/profile/button-breed-disabled.png"],
     img[src$="/static/layout/archaeology/button-muster-resources-disabled.png"],
     #archaeology-dig-site-header-left > div[class*="disabled"] > img,
-    #coli-equip-lock-btn.coli-equip-disabled, #coli-equip-clear-btn.coli-equip-disabled {
+    #coli-equip-lock-btn.coli-equip-disabled,
+    #coli-equip-clear-btn.coli-equip-disabled {
         filter: var(--filter) hue-rotate(var(--hue)) brightness(90%) contrast(140%);
     }
     img[src$="/static/layout/lair/backgrounds/male.png"],
@@ -7040,7 +7752,9 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     .coli-equip-statdlg-plus-btn {
         filter: var(--filter) hue-rotate(var(--hue)) brightness(75%) contrast(150%);
     }
-    img[src$="http://www1.flightrising.com/static/layout/revamp/clock_large.png"], img[src$="/images/layout/revamp/clock_large.png"], img[src$="https://www1.flightrising.com/static/layout/revamp/clock_large.png"],
+    img[src$="http://www1.flightrising.com/static/layout/revamp/clock_large.png"],
+    img[src$="/images/layout/revamp/clock_large.png"],
+    img[src$="https://www1.flightrising.com/static/layout/revamp/clock_large.png"],
     #cluetip-waitimage,
     #frontpage-latest-news,
     .archaeology-dig-site-index-row-focus-toggle,
@@ -7050,7 +7764,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     img[src$="static/layout/toggle_off.png"] {
         filter: var(--filter) hue-rotate(var(--hue));
     }
-    img[src$="/static/layout/profile/emblem-ancient.png"], img[src$="/static/layout/profile/emblem-hatchling.png"] {
+    img[src$="/static/layout/profile/emblem-ancient.png"],
+    img[src$="/static/layout/profile/emblem-hatchling.png"] {
         filter: invert(100) var(--filter) hue-rotate(var(--hue));
         opacity: 0.7;
     }
@@ -7075,7 +7790,8 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     img[src$="/static/icons/question.png"] {
         filter: invert(100%) var(--filter) hue-rotate(var(--hue)) brightness(100%) contrast(100%)
     }
-    #coli-equip-statpoints-btn, .coli-equip-statdlg-plus-btn.coli-equip-disabled {
+    #coli-equip-statpoints-btn,
+    .coli-equip-statdlg-plus-btn.coli-equip-disabled {
         filter: invert(100) var(--filter) hue-rotate(var(--hue)) brightness(110%) saturate(200%);
     }
     img[src$="/static/layout/baldwin/arrow.png"] {
@@ -7106,5 +7822,4 @@ text-shadow: -2px -2px 0px var(--shadow), -2px -1px 0px var(--shadow), -2px 0px 
     img[src$="/static/layout/common/common-checkmark.png"] {
         filter: sepia(100%) hue-rotate(75deg) brightness(150%) saturate(250%);
     }
-    
 }
