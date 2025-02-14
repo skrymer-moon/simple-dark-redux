@@ -1,0 +1,30 @@
+/* ==UserStyle==
+@name           Simpler dark style
+@namespace      skrystuff
+@description    A simplification of Simple Dark Redux for Flight Rising.
+@author         Skry
+@version        0.0.1
+@preprocessor   default
+
+==/UserStyle== */
+@-moz-document regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com.*") {
+    /* Constants for everywhere */
+    :root {
+        --background: #000000;
+        --selection-bg: #050613;
+        --selection-text: #ffb1e4;
+        --text: #dae0e7;
+    }
+
+    ::selection,
+    *::selection {
+        filter: none !important;
+        background: var(--selection-bg);
+        color: var(--selection-text);
+    }
+    body {
+        background-color: var(--background);
+        background-attachment: fixed;
+        color: var(--text);
+    }
+}
