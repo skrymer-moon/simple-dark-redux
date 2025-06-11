@@ -4662,7 +4662,7 @@ regexp("(http|https):\\/\\/(|www\\.|www1\\.)flightrising\\.com\\/trading\\/fanta
         box-sizing: border-box;
     }
     .crafter-recipe-ingredient[data-requirement-met="0"] {
-        opacity: 1;
+        opacity: 0.5;
         color: var(--error-text);
         filter: none;
     }
